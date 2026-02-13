@@ -1,0 +1,114 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--cor-white);
+  border-bottom: var(--border-thick);
+  transition: box-shadow 0.3s;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 80px;
+  position: relative;
+  background-color: var(--cor-white);
+  z-index: 20;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+}
+
+.iconButton:hover {
+  background-color: var(--cor-acid-yellow);
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: auto;
+}
+
+.title {
+  font-family: var(--font-destaque-1);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--cor-black);
+  white-space: nowrap;
+}
+
+.navBar {
+  background-color: var(--cor-white);
+  overflow-x: auto;
+  scrollbar-width: none;
+  transform-origin: top;
+}
+
+.navBar::-webkit-scrollbar {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navItem {
+  flex-shrink: 0;
+}
+
+.navLink {
+  display: block;
+  padding: 1rem 2rem;
+  font-family: var(--font-destaque-2);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 0.3s,
+    letter-spacing 0.3s;
+  background-color: transparent;
+  color: var(--cor-black);
+}
+
+.navLink:hover {
+  background-color: var(--tab-color);
+  letter-spacing: 2px;
+}
+
+.navLink.active {
+  letter-spacing: 1px;
+  background-color: var(--tab-color);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .navList {
+    justify-content: flex-start;
+  }
+}

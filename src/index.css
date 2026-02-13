@@ -1,0 +1,81 @@
+:root {
+  --cor-acid-yellow: #f2ea00;
+  --cor-primary: #fcd000;
+  --cor-brand-orange: #fc8400;
+  --cor-alert: #f54f00;
+
+  --cor-black: #000000;
+  --cor-off-black: #121212;
+  --cor-white: #ffffff;
+  --cor-gray-light: #f4f4f4;
+
+  --font-display: "Syne", sans-serif;
+
+  --font-body: "Montserrat", sans-serif;
+
+  --font-destaque-1: "Anton", sans-serif;
+  --font-destaque-2: "Oswald", sans-serif;
+  --font-serif: "Vollkorn", serif;
+
+  --border-thick: 2px solid var(--cor-black);
+  --border-thin: 1px solid var(--cor-black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-white);
+  color: var(--cor-black);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-family: var(--font-destaque-1);
+  font-size: 3.5rem;
+}
+h2 {
+  font-family: var(--font-destaque-2);
+  font-size: 2.5rem;
+}
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+a:hover {
+  background-color: var(--cor-acid-yellow);
+  color: var(--cor-black);
+}
+
+/* --- BREAKPOINTS (Referência) --- */
+/* Como CSS Variables não funcionam dentro de @media query,
+   use estes valores fixos nos seus arquivos .module.css:
+
+   Mobile:  max-width: 480px
+   Tablet:  max-width: 768px
+   Laptop:  max-width: 1024px
+   Desktop: min-width: 1280px
+*/
