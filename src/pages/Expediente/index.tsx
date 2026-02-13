@@ -38,7 +38,7 @@ const equipe = [
     nome: "Carla Souza",
     cargo: "Pesquisadora",
     bio: "Doutora em sociologia das religiões.",
-    cor: "var(--cor-black)",
+    cor: "#f50800ff",
   },
   {
     id: 6,
@@ -107,7 +107,7 @@ export function Expediente() {
         >
           <Link to="/" className={styles.backButton}>
             <motion.div
-              whileHover={{ x: -10 }}
+              whileHover={{ x: -5 }}
               style={{ display: "flex", alignItems: "center", gap: "8px" }}
             >
               <ArrowLeft size={20} /> VOLTAR AO PORTAL
@@ -118,7 +118,7 @@ export function Expediente() {
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
           className={styles.title}
         >
           Expediente
@@ -139,9 +139,10 @@ export function Expediente() {
         {equipe.map((membro, index) => (
           <motion.div
             key={membro.id}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
+            // Stagger animation: um card entra depois do outro suavemente
             transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
             className={styles.card}
           >
@@ -149,12 +150,12 @@ export function Expediente() {
               <motion.div
                 className={styles.photoContainer}
                 style={{ backgroundColor: membro.cor }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.05 }} // Zoom interno suave na cor/foto
+                transition={{ duration: 0.4 }}
               >
                 <motion.span
                   className={styles.photoLabel}
-                  whileHover={{ x: 15, skewX: -10 }}
+                  whileHover={{ x: 20, skewX: -10 }} // Texto do fundo se move
                 >
                   {membro.nome.split(" ")[0]}
                 </motion.span>
@@ -164,15 +165,12 @@ export function Expediente() {
                 className={styles.overlay}
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
-                style={{
-                  background: "rgba(0,0,0,0.6)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
               >
-                <motion.div initial={{ y: 10 }} whileHover={{ y: 0 }}>
-                  <ExternalLink size={32} color="var(--cor-primary)" />
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                >
+                  <ExternalLink size={32} color="#fff" strokeWidth={2} />
                 </motion.div>
               </motion.div>
             </div>

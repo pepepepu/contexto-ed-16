@@ -4,6 +4,17 @@
   padding: 4rem clamp(1rem, 5vw, 6rem);
 }
 
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--cor-brand-orange);
+  transform-origin: 0%;
+  z-index: 1000;
+}
+
 .header {
   margin-bottom: 5rem;
   border-bottom: var(--border-thick);
@@ -44,34 +55,63 @@
 }
 
 .card {
-  border: var(--border-thin);
-  transition: transform 0.3s ease;
+  background: #fff;
+  border: 2px solid var(--cor-black);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: box-shadow 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--cor-brand-orange);
+  box-shadow: 12px 12px 0px var(--cor-black);
+  z-index: 10;
+}
+
+.photoWrapper {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--cor-black);
 }
 
 .photoContainer {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
   display: flex;
-  align-items: flex-end;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  border-bottom: var(--border-thin);
 }
 
 .photoLabel {
   font-family: var(--font-destaque-1);
   font-size: 4rem;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
+  user-select: none;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .info {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .memberName {
@@ -85,9 +125,11 @@
   display: block;
   font-family: "Manrope", sans-serif;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--cor-brand-orange);
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .bio {
@@ -100,13 +142,16 @@
 
 .socials {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-top: auto;
   color: #ccc;
-  cursor: pointer;
 }
 
-.socials svg:hover {
+.socialLink {
   color: var(--cor-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
@@ -124,49 +169,7 @@
   .grid {
     grid-template-columns: 1fr;
   }
-}
-
-.photoWrapper {
-  position: relative;
-  overflow: hidden;
-  border-bottom: var(--border-thick);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.card {
-  background: #fff;
-  border: var(--border-thick);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.photoLabel {
-  font-family: var(--font-destaque-1);
-  font-size: 5rem;
-  color: rgba(255, 255, 255, 0.4);
-  text-transform: uppercase;
-  user-select: none;
-  display: block;
-}
-
-.socials {
-  display: flex;
-  gap: 1.2rem;
-  margin-top: auto;
-  color: var(--cor-black);
-  padding-top: 1rem;
+  .card:hover {
+    box-shadow: 6px 6px 0px var(--cor-black);
+  }
 }

@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
+import saoGoncalo from "../../../assets/sao_goncalo/img01.jpg";
 
 const noticias = [
   {
@@ -9,47 +12,8 @@ const noticias = [
     subtitulo:
       "Como o sagrado se mistura nas ruas de Salvador e recria tradições ancestrais.",
     tag: "Cultura",
-    img: "https://images.unsplash.com/photo-1567596388902-19e99a4e98b3?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    titulo: "Espiritualidade Digital",
-    subtitulo:
-      "A busca por conexão divina através de aplicativos e cultos no metaverso.",
-    tag: "Tecnologia",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    titulo: "Fé Além das Fronteiras",
-    subtitulo:
-      "Histórias de imigrantes que carregam suas devoções para novos continentes.",
-    tag: "Sociedade",
-    img: "https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    titulo: "O Silêncio dos Claustros",
-    subtitulo:
-      "Um olhar íntimo sobre a vida monástica em meio ao caos da metrópole.",
-    tag: "História",
-    img: "https://images.unsplash.com/photo-1518558997970-4ddc236affcd?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    titulo: "Arte Sacra Moderna",
-    subtitulo:
-      "Artistas contemporâneos que ressignificam ícones religiosos em suas obras.",
-    tag: "Arte",
-    img: "https://images.unsplash.com/photo-1544207240-8b10357508df?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 6,
-    titulo: "Rituais Urbanos",
-    subtitulo:
-      "Pequenos gestos de fé que passam despercebidos no dia a dia da cidade.",
-    tag: "Cotidiano",
-    img: "https://images.unsplash.com/photo-1507643179173-61b04078e608?q=80&w=800&auto=format&fit=crop",
+    img: saoGoncalo,
+    link: "/reportagens/sao-goncalo",
   },
 ];
 
@@ -163,27 +127,36 @@ export function Reportagens() {
 
 function Card({ data }: { data: (typeof noticias)[0] }) {
   const [isHovered, setIsHovered] = useState(false);
+  const hasLink = data.link && data.link !== "#";
 
-  return (
+  const containerStyle: React.CSSProperties = {
+    minWidth: "clamp(300px, 100vw, 380px)",
+    width: "clamp(300px, 85vw, 380px)",
+    height: "55vh",
+    minHeight: "450px",
+    scrollSnapAlign: "start",
+    flexShrink: 0,
+    textDecoration: "none",
+    color: "inherit",
+    cursor: "pointer",
+    position: "relative",
+    display: "block",
+  };
+
+  const CardContent = (
     <motion.article
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      whileHover={{ y: -10 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       style={{
-        minWidth: "clamp(300px, 100vw, 380px)",
-        width: "clamp(300px, 85vw, 380px)",
-        height: "55vh",
-        minHeight: "450px",
-        scrollSnapAlign: "start",
-        position: "relative",
         border: "var(--border-thick)",
         display: "flex",
         flexDirection: "column",
-        cursor: "pointer",
         backgroundColor: "#fff",
-        flexShrink: 0,
+        height: "100%",
+        width: "100%",
       }}
-      whileHover={{ y: -10 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       <div
         style={{
@@ -312,4 +285,14 @@ function Card({ data }: { data: (typeof noticias)[0] }) {
       </div>
     </motion.article>
   );
+
+  if (hasLink) {
+    return (
+      <Link to={data.link} style={containerStyle}>
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return <div style={containerStyle}>{CardContent}</div>;
 }
