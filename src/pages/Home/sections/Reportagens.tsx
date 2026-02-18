@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-import saoGoncalo from "../../../assets/sao_goncalo/img01.jpg";
+import saoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
 
 const noticias = [
   {
