@@ -11,15 +11,15 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
 
-import hero from "../../../assets/sao_goncalo/img01.jpg";
-import imagem2 from "../../../assets/sao_goncalo/img02.jpg";
-import imagem3 from "../../../assets/sao_goncalo/img03.jpg";
-import imagemCarrosel01 from "../../../assets/sao_goncalo/imgCarrosel (1).jpg";
-import imagemCarrosel02 from "../../../assets/sao_goncalo/imgCarrosel (2).jpg";
-import imagemCarrosel03 from "../../../assets/sao_goncalo/imgCarrosel (3).jpg";
-import imagemCarrosel04 from "../../../assets/sao_goncalo/imgCarrosel (4).jpg";
-import imagemCarrosel05 from "../../../assets/sao_goncalo/imgCarrosel (5).jpg";
-import imagemCarrosel06 from "../../../assets/sao_goncalo/imgCarrosel (6).jpg";
+import hero from "../../../assets/saoGoncalo/img01.jpg";
+import imagem2 from "../../../assets/saoGoncalo/img02.jpg";
+import imagem3 from "../../../assets/saoGoncalo/img03.jpg";
+import imagemCarrosel01 from "../../../assets/saoGoncalo/imgCarrosel (1).jpg";
+import imagemCarrosel02 from "../../../assets/saoGoncalo/imgCarrosel (2).jpg";
+import imagemCarrosel03 from "../../../assets/saoGoncalo/imgCarrosel (3).jpg";
+import imagemCarrosel04 from "../../../assets/saoGoncalo/imgCarrosel (4).jpg";
+import imagemCarrosel05 from "../../../assets/saoGoncalo/imgCarrosel (5).jpg";
+import imagemCarrosel06 from "../../../assets/saoGoncalo/imgCarrosel (6).jpg";
 
 const IMAGES = {
   hero: hero,
@@ -433,7 +433,7 @@ export function SaoGoncalo() {
 
           <AudioPlayer
             title="CÂNTICO DE ENTRADA"
-            src="../../assets/sao_goncalo/audio01.mp3"
+            src="../../assets/saoGoncalo/audio01.mp3"
           />
 
           <p>
@@ -674,7 +674,7 @@ export function SaoGoncalo() {
 
           <AudioPlayer
             title="DEPOIMENTO DE MESTRE ZÉ"
-            src={"../../assets/sao_goncalo/audio02.mp3"}
+            src={"../../assets/saoGoncalo/audio02.mp3"}
           />
 
           <p>
