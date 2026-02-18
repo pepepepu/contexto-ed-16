@@ -125,8 +125,6 @@ export function SaoGoncalo() {
           <span>
             Por <strong>Redação Contexto</strong>
           </span>
-          <span>•</span>
-          <span>15 min de leitura</span>
         </motion.div>
 
         <AnimatedSection className={styles.contentBlock}>

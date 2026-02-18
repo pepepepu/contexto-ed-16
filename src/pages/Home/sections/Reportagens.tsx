@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import saoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
+import cheganca from "../../../assets/cheganca/imagem01.jpg";
+import bomJesus from "../../../assets/bomJesus/imagem01.jpg";
 
 const noticias = [
   {
@@ -14,6 +16,24 @@ const noticias = [
     tag: "Cultura",
     img: saoGoncalo,
     link: "/reportagens/sao-goncalo",
+  },
+  {
+    id: 2,
+    titulo: "Entre a cruz e a espada, a Chegança em Sergipe",
+    subtitulo:
+      "A história de uma das principais manifestações religiosas e culturais do estado, que atravessa gerações e resiste ao apagamento",
+    tag: "Cultura",
+    img: cheganca,
+    link: "/reportagens/cheganca",
+  },
+  {
+    id: 2,
+    titulo: "Tradição que resiste sobre as águas",
+    subtitulo:
+      "O cortejo de Bom Jesus dos Navegantes representa uma manifestação religiosa e cultural passada em família, de geração para geração",
+    tag: "Cultura",
+    img: bomJesus,
+    link: "/reportagens/bom-jesus",
   },
 ];
 

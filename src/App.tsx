@@ -5,6 +5,7 @@ import { Expediente } from "./pages/Expediente";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { SaoGoncalo } from "./pages/Entrevistas/SaoGoncalo";
+import { Cheganca } from "./pages/Entrevistas/Cheganca";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/expediente" element={<Expediente />} />
 
         <Route path="/reportagens/sao-goncalo" element={<SaoGoncalo />} />
+        <Route path="/reportagens/cheganca" element={<Cheganca />} />
       </Routes>
     </BrowserRouter>
   );
