@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import { SaoGoncalo } from "./pages/Entrevistas/SaoGoncalo";
 import { Cheganca } from "./pages/Entrevistas/Cheganca";
 import { BomJesus } from "./pages/Entrevistas/BomJesus";
+import { Lavagem } from "./pages/Entrevistas/Lavagem";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/reportagens/sao-goncalo" element={<SaoGoncalo />} />
         <Route path="/reportagens/cheganca" element={<Cheganca />} />
         <Route path="/reportagens/bom-jesus" element={<BomJesus />} />
+        <Route path="/reportagens/lavagem-conceicao" element={<Lavagem />} />
       </Routes>
     </BrowserRouter>
   );

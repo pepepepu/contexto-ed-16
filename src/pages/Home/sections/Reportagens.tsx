@@ -5,14 +5,15 @@ import { Link } from "react-router-dom";
 
 import saoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
 import cheganca from "../../../assets/cheganca/imagem01.jpg";
-import bomJesus from "../../../assets/bomJesus/imagem01.jpg";
+import bomJesus from "../../../assets/bomJesus/hero.jpg";
+import lavagem from "../../../assets/lavagemConceicao/hero.jpg";
 
 const noticias = [
   {
     id: 1,
-    titulo: "O Sincretismo na Bahia",
+    titulo: "Celebração do São Gonçalo na Mussuca",
     subtitulo:
-      "Como o sagrado se mistura nas ruas de Salvador e recria tradições ancestrais.",
+      "Da liderança de Neilton Santana à preparação dos novos brincantes, a comunidade da Mussuca garante que a tradição do São Gonçalo atravesse séculos sem perder o fôlego",
     tag: "Cultura",
     img: saoGoncalo,
     link: "/reportagens/sao-goncalo",
@@ -27,13 +28,22 @@ const noticias = [
     link: "/reportagens/cheganca",
   },
   {
-    id: 2,
+    id: 3,
     titulo: "Tradição que resiste sobre as águas",
     subtitulo:
       "O cortejo de Bom Jesus dos Navegantes representa uma manifestação religiosa e cultural passada em família, de geração para geração",
     tag: "Cultura",
     img: bomJesus,
     link: "/reportagens/bom-jesus",
+  },
+  {
+    id: 4,
+    titulo: "A força da fé contra a frieza do ferro",
+    subtitulo:
+      "A Lavagem da Conceição completou 43 anos em Aracaju e revelou, entre memórias, ritos e tensões, como o sincretismo religioso segue vivo mesmo diante de igrejas que fecham seus portões com cadeados",
+    tag: "Cultura",
+    img: lavagem,
+    link: "/reportagens/lavagem-conceicao",
   },
 ];
 
