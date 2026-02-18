@@ -7,6 +7,7 @@ import saoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
 import cheganca from "../../../assets/cheganca/imagem01.jpg";
 import bomJesus from "../../../assets/bomJesus/hero.jpg";
 import lavagem from "../../../assets/lavagemConceicao/hero.jpg";
+import penitentes from "../../../assets/penitentes/hero.jpg";
 
 const noticias = [
   {
@@ -44,6 +45,15 @@ const noticias = [
     tag: "Cultura",
     img: lavagem,
     link: "/reportagens/lavagem-conceicao",
+  },
+  {
+    id: 5,
+    titulo: "Uma tradição que se renova",
+    subtitulo:
+      "Na Capital Sergipana da Fé, existe um grupo — os penitentes — que contrariou previsões de que estariam prestes a ruir e que hoje se mostram mais fortes que nunca",
+    tag: "Cultura",
+    img: penitentes,
+    link: "/reportagens/penitentes",
   },
 ];
 
