@@ -12,28 +12,28 @@ import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
 
 import hero from "../../../assets/sao_goncalo/img01.jpg";
-import img02 from "../../../assets/sao_goncalo/img02.jpg";
-import img03 from "../../../assets/sao_goncalo/img03.jpg";
-import img01Carrosel from "../../../assets/sao_goncalo/imgCarrosel (1).jpg";
-import img02Carrosel from "../../../assets/sao_goncalo/imgCarrosel (2).jpg";
-import img03Carrosel from "../../../assets/sao_goncalo/imgCarrosel (3).jpg";
-import img04Carrosel from "../../../assets/sao_goncalo/imgCarrosel (4).jpg";
-import img05Carrosel from "../../../assets/sao_goncalo/imgCarrosel (5).jpg";
-import img06Carrosel from "../../../assets/sao_goncalo/imgCarrosel (6).jpg";
+import imagem2 from "../../../assets/sao_goncalo/img02.jpg";
+import imagem3 from "../../../assets/sao_goncalo/img03.jpg";
+import imagemCarrosel01 from "../../../assets/sao_goncalo/imgCarrosel (1).jpg";
+import imagemCarrosel02 from "../../../assets/sao_goncalo/imgCarrosel (2).jpg";
+import imagemCarrosel03 from "../../../assets/sao_goncalo/imgCarrosel (3).jpg";
+import imagemCarrosel04 from "../../../assets/sao_goncalo/imgCarrosel (4).jpg";
+import imagemCarrosel05 from "../../../assets/sao_goncalo/imgCarrosel (5).jpg";
+import imagemCarrosel06 from "../../../assets/sao_goncalo/imgCarrosel (6).jpg";
 
 const IMAGES = {
   hero: hero,
   img01: hero,
-  img02: img02,
-  img03: img03,
-  img04: img04Carrosel,
+  img02: imagem2,
+  img03: imagem3,
+  img04: imagemCarrosel04,
   carousel: [
-    img01Carrosel,
-    img02Carrosel,
-    img03Carrosel,
-    img04Carrosel,
-    img05Carrosel,
-    img06Carrosel,
+    imagemCarrosel01,
+    imagemCarrosel02,
+    imagemCarrosel03,
+    imagemCarrosel04,
+    imagemCarrosel05,
+    imagemCarrosel06,
   ],
 };
 
