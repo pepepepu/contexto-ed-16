@@ -8,6 +8,7 @@ import cheganca from "../../../assets/cheganca/imagem01.jpg";
 import bomJesus from "../../../assets/bomJesus/hero.jpg";
 import lavagem from "../../../assets/lavagemConceicao/hero.jpg";
 import penitentes from "../../../assets/penitentes/hero.jpg";
+import taieiras from "../../../assets/taieiras/imagemCarrosel03.jpg";
 
 const noticias = [
   {
@@ -54,6 +55,15 @@ const noticias = [
     tag: "Cultura",
     img: penitentes,
     link: "/reportagens/penitentes",
+  },
+  {
+    id: 6,
+    titulo: "Entre fé e devoção, a tradição das Taieiras",
+    subtitulo:
+      "Apesar da força cultural e religiosa, o grupo enfrenta desafios",
+    tag: "Cultura",
+    img: taieiras,
+    link: "/reportagens/taieiras",
   },
 ];
 
