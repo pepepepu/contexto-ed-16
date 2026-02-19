@@ -1,81 +1,9 @@
 import { motion, useScroll, useSpring } from "framer-motion";
-import { ArrowLeft, Mail, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import styles from "./Expediente.module.css";
-
-const equipe = [
-  {
-    id: 1,
-    nome: "George Oliveira",
-    cargo: "Editor-Chefe",
-    bio: "Jornalista apaixonado por narrativas urbanas e fé.",
-    cor: "var(--cor-primary)",
-  },
-  {
-    id: 2,
-    nome: "Pedro Barros",
-    cargo: "UI/UX & Dev",
-    bio: "Desenvolvedor focado em experiências digitais modernas.",
-    cor: "var(--cor-brand-orange)",
-  },
-  {
-    id: 3,
-    nome: "Ana Silva",
-    cargo: "Repórter Fotográfica",
-    bio: "Especialista em capturar o sagrado no cotidiano.",
-    cor: "var(--cor-alert)",
-  },
-  {
-    id: 4,
-    nome: "Lucas Mendes",
-    cargo: "Editor de Vídeo",
-    bio: "Transformando relatos em documentários imersivos.",
-    cor: "var(--cor-acid-yellow)",
-  },
-  {
-    id: 5,
-    nome: "Carla Souza",
-    cargo: "Pesquisadora",
-    bio: "Doutora em sociologia das religiões.",
-    cor: "#f50800ff",
-  },
-  {
-    id: 6,
-    nome: "Mariana Luz",
-    cargo: "Social Media",
-    bio: "Conectando o projeto às comunidades digitais.",
-    cor: "#f50800ff",
-  },
-  {
-    id: 7,
-    nome: "João P. Oliveira",
-    cargo: "Antropólogo",
-    bio: "Estudioso dos ritos de passagem brasileiros.",
-    cor: "#FCD000",
-  },
-  {
-    id: 8,
-    nome: "Beatriz Costa",
-    cargo: "Ilustradora",
-    bio: "Dando forma visual aos mitos e lendas.",
-    cor: "#FC8400",
-  },
-  {
-    id: 9,
-    nome: "Ricardo Gomes",
-    cargo: "Produtor",
-    bio: "Viabilizando as expedições por todo o Sergipe.",
-    cor: "#F54F00",
-  },
-  {
-    id: 10,
-    nome: "Elena Martins",
-    cargo: "Arquivista",
-    bio: "Curadoria histórica e preservação de memórias.",
-    cor: "#F2EA00",
-  },
-];
+import { equipe } from "./equipeData";
 
 export function Expediente() {
   const { pathname } = useLocation();
@@ -139,26 +67,50 @@ export function Expediente() {
         {equipe.map((membro, index) => (
           <motion.div
             key={membro.id}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            // Stagger animation: um card entra depois do outro suavemente
-            transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+            viewport={{ once: true, margin: "200px" }}
+            transition={{ duration: 0.4, delay: (index % 4) * 0.05 }}
             className={styles.card}
+            style={
+              {
+                contentVisibility: "auto",
+                containIntrinsicSize: "100% 400px",
+              } as React.CSSProperties
+            }
           >
             <div className={styles.photoWrapper}>
               <motion.div
                 className={styles.photoContainer}
                 style={{ backgroundColor: membro.cor }}
-                whileHover={{ scale: 1.05 }} // Zoom interno suave na cor/foto
-                transition={{ duration: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               >
-                <motion.span
-                  className={styles.photoLabel}
-                  whileHover={{ x: 20, skewX: -10 }} // Texto do fundo se move
-                >
-                  {membro.nome.split(" ")[0]}
-                </motion.span>
+                {membro.foto ? (
+                  <img
+                    src={membro.foto}
+                    alt={membro.nome}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    width={400}
+                    height={400}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      willChange: "transform",
+                    }}
+                  />
+                ) : (
+                  <motion.span
+                    className={styles.photoLabel}
+                    whileHover={{ x: 20, skewX: -10 }}
+                  >
+                    {membro.nome.split(" ")[0]}
+                  </motion.span>
+                )}
               </motion.div>
 
               <motion.div
@@ -178,24 +130,6 @@ export function Expediente() {
             <div className={styles.info}>
               <h2 className={styles.memberName}>{membro.nome}</h2>
               <span className={styles.role}>{membro.cargo}</span>
-              <p className={styles.bio}>{membro.bio}</p>
-
-              <div className={styles.socials}>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.2, color: "var(--cor-brand-orange)" }}
-                  className={styles.socialLink}
-                >
-                  <Mail size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.2, color: "#0077b5" }}
-                  className={styles.socialLink}
-                >
-                  <Linkedin size={20} />
-                </motion.a>
-              </div>
             </div>
           </motion.div>
         ))}

@@ -1,6 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
 
@@ -20,6 +19,7 @@ import imagemCarrosel02_03 from "../../../assets/penitentes/imagemCarrosel02_03.
 import imagemCarrosel03_01 from "../../../assets/penitentes/imagemCarrosel03_01.jpg";
 import imagemCarrosel03_02 from "../../../assets/penitentes/imagemCarrosel03_02.jpg";
 import imagemCarrosel03_03 from "../../../assets/penitentes/imagemCarrosel03_03.jpg";
+import { Carousel } from "../../../components";
 
 const IMAGES = {
   hero: hero,
@@ -253,9 +253,9 @@ export function Penitentes() {
           >
             <img src={IMAGES.sec2_img1} alt="Imagem única" loading="lazy" />
             <figcaption>
-              Foto: Maria Eduarda Rocha <br></br>As indumentárias utilizadas
-              pelos penitentes de Nossa Senhora das Dores representam a pureza e
-              chamam a atenção por se destacarem durante a noite.
+              As indumentárias utilizadas pelos penitentes de Nossa Senhora das
+              Dores representam a pureza e chamam a atenção por se destacarem
+              durante a noite. Foto: Maria Eduarda Rocha
             </figcaption>
           </motion.figure>
 
@@ -280,7 +280,10 @@ export function Penitentes() {
             Dantas e Francisco Pedro Nascimento, também conhecido como Ioiô.
           </p>
 
-          <ImageCarousel images={IMAGES.carousel_sec2_1} />
+          <Carousel
+            images={IMAGES.carousel_sec2_1}
+            legenda="O grupo de penitentes de Dores registrou as regras da procissão em um livro na década de 70. Esse documento ainda é mantido e é atualizado com registros e adendos às regras. Fotos: Maria Eduarda Rocha"
+          />
 
           <p>
             De acordo com o atual presidente, Igor Araújo, e o antigo
@@ -355,7 +358,10 @@ export function Penitentes() {
             sair [na procissão] com 12, 13 anos”.
           </p>
 
-          <ImageCarousel images={IMAGES.carousel_sec2_2} />
+          <Carousel
+            images={IMAGES.carousel_sec2_2}
+            legenda="Nestor de Andrade, mesmo após ter deixado os penitentes há mais de 20 anos, ainda é reconhecido em Dores como uma das principais lideranças de grupo e grande conhecedor de sua história. Fotos: Maria Eduarda Rocha"
+          />
 
           <p>
             Dos jovens que começaram a fazer parte do movimento na casa dos 14
@@ -501,10 +507,9 @@ export function Penitentes() {
               loading="lazy"
             />
             <figcaption>
-              Fotos: Maria Eduarda Rocha<br></br>
-              Legenda: O som da matraca é um dos principais identificadores da
-              procissão dos penitentes. O uso desse instrumento no cortejo foi
-              trazido com a tradição pelos portugueses.
+              O som da matraca é um dos principais identificadores da procissão
+              dos penitentes. O uso desse instrumento no cortejo foi trazido com
+              a tradição pelos portugueses. Fotos: Maria Eduarda Rocha
             </figcaption>
           </motion.figure>
 
@@ -638,7 +643,10 @@ export function Penitentes() {
             inclinação, mas o espírito ele enobrece. Então é muito bonito ver”.
           </p>
 
-          <ImageCarousel images={IMAGES.carousel_sec3} />
+          <Carousel
+            images={IMAGES.carousel_sec3}
+            legenda="Como fortalecimento da fé em torno da tradição, parte do grupo de penitentes se encontra com frequência durante o ano para rezar na primeira segunda-feira de cada mês uma missa pelas almas. Fotos: Gustavo Barbosa e Maria Eduarda Rocha"
+          />
 
           <p>
             Em sua trajetória, Seu Jorge Santos não deixou de completar o
@@ -729,54 +737,5 @@ function AnimatedSection({
         <motion.div variants={fadeInUp}>{children}</motion.div>
       )}
     </motion.section>
-  );
-}
-
-function ImageCarousel({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-  return (
-    <div className={styles.carouselWrapper}>
-      <button
-        className={`${styles.carouselBtn} ${styles.prev}`}
-        onClick={prevSlide}
-      >
-        <ChevronLeft size={24} color="#000" />
-      </button>
-
-      <div className={styles.carouselTrackContainer}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-        >
-          {images.map((img, index) => (
-            <div key={index} className={styles.carouselSlide}>
-              <img src={img} alt={`Imagem ${index + 1}`} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <button
-        className={`${styles.carouselBtn} ${styles.next}`}
-        onClick={nextSlide}
-      >
-        <ChevronRight size={24} color="#000" />
-      </button>
-      <div className={styles.carouselDots}>
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ""}`}
-          />
-        ))}
-      </div>
-    </div>
   );
 }

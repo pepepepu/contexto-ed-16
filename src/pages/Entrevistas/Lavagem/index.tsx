@@ -1,6 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
 
@@ -23,6 +22,7 @@ import imagemCarrosel03_03 from "../../../assets/lavagemConceicao/imagemCarrosel
 import imagemCarrosel04_01 from "../../../assets/lavagemConceicao/imagemCarrosel04_01.jpg";
 import imagemCarrosel04_02 from "../../../assets/lavagemConceicao/imagemCarrosel04_02.jpg";
 import imagemCarrosel04_03 from "../../../assets/lavagemConceicao/imagemCarrosel04_03.jpg";
+import { Carousel } from "../../../components";
 
 const IMAGES = {
   hero: hero,
@@ -210,10 +210,14 @@ export function Lavagem() {
           >
             <img
               src={IMAGES.imgSection1_1}
-              alt="Detalhe da Chegança"
+              alt="Primeira Lavagem da Conceição"
               loading="lazy"
             />
-            <figcaption>Fig. 1 — O cortejo pelas ruas da cidade.</figcaption>
+            <figcaption>
+              Primeira Lavagem da Conceição, ocorrida em 8 de dezembro de 1982,
+              sem a participação direta de terreiros. Reprodução: Imagens de
+              Arquivo.
+            </figcaption>
           </motion.figure>
 
           <p>
@@ -253,10 +257,13 @@ export function Lavagem() {
           >
             <img
               src={IMAGES.imgSection1_2}
-              alt="Espadas e trajes"
+              alt="Com afeto e cuidado"
               loading="lazy"
             />
-            <figcaption>Fig. 2 — A representação da batalha.</figcaption>
+            <figcaption>
+              Com afeto e cuidado, Ialorixá Angélica abre as portas da memória e
+              relata com sabedoria a experiência vivida. Foto: Yan Lima
+            </figcaption>
           </motion.figure>
         </AnimatedSection>
 
@@ -302,7 +309,10 @@ export function Lavagem() {
             preservação das tradições e o combate à intolerância religiosa.
           </p>
 
-          <ImageCarousel images={IMAGES.carouselSection2_1} />
+          <Carousel
+            images={IMAGES.carouselSection2_1}
+            legenda="Celebrar e resistir; a tradição que se mantém viva em cada passo do cortejo pelas ruas de Aracaju. Foto: Raquel Lopes"
+          />
 
           <p>
             De mãos dadas, formando uma linha de frente para representar a união
@@ -345,7 +355,10 @@ export function Lavagem() {
             trabalho na casa.
           </p>
 
-          <ImageCarousel images={IMAGES.carouselSection2_2} />
+          <Carousel
+            images={IMAGES.carouselSection2_2}
+            legenda="Em 2025, a temática do ano foi “A missão dos iniciados como Guardiões do Sagrado e luta contra a intolerância religiosa”. Foto: Yan Lima"
+          />
 
           <p>
             O percurso continuou. Passamos pelas principais avenidas da região
@@ -396,22 +409,39 @@ export function Lavagem() {
             todos prontos para o momento, o barco foi se afastando.
           </p>
 
-          <motion.div
+          <motion.figure
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className={styles.videoContainer}
+            style={{ margin: "5rem 0" }}
           >
-            <iframe
-              width="100%"
-              height="450"
-              src="https://youtu.be/FmdvlJB9mzA"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </motion.div>
+            <div className={styles.videoContainer} style={{ margin: 0 }}>
+              <iframe
+                width="100%"
+                height="450"
+                src="https://www.youtube.com/embed/FmdvlJB9mzA?si=pmYkdXAbRzMvQ5yW"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <figcaption
+              style={{
+                fontFamily: "var(--font-ui)",
+                fontSize: "1rem",
+                color: "#666",
+                marginTop: "1.2rem",
+                borderLeft: "5px solid var(--cor-primary)",
+                paddingLeft: "1rem",
+                fontStyle: "italic",
+              }}
+            >
+              No caminho, os cantos não paravam; homenageavam e clamavam por
+              Oxum. Vídeo: Raquel Lopes
+            </figcaption>
+          </motion.figure>
 
           <p>
             Enquanto Raquel se distanciava sobre as águas junto com o pequeno
@@ -508,7 +538,10 @@ export function Lavagem() {
             dedicado a ela.
           </p>
 
-          <ImageCarousel images={IMAGES.carouselSection3_1} />
+          <Carousel
+            images={IMAGES.carouselSection3_1}
+            legenda="Enquanto as portas se mantinham abertas, os portões de ferro afastaram os fiéis do centro católico. Foto: Raquel Lopes"
+          />
 
           <p>
             Lembramos bem do momento em que uma voz surgiu no meio da multidão,
@@ -585,7 +618,10 @@ export function Lavagem() {
             abertos.
           </p>
 
-          <ImageCarousel images={IMAGES.carouselSection3_2} />
+          <Carousel
+            images={IMAGES.carouselSection3_2}
+            legenda="Menos de 10 minutos que a festa tinha se encerrado, as flores amarelas foram descartadas pela Igreja.  Foto: Raquel Lopes"
+          />
         </AnimatedSection>
       </main>
     </div>
@@ -617,54 +653,5 @@ function AnimatedSection({
         <motion.div variants={fadeInUp}>{children}</motion.div>
       )}
     </motion.section>
-  );
-}
-
-function ImageCarousel({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-  return (
-    <div className={styles.carouselWrapper}>
-      <button
-        className={`${styles.carouselBtn} ${styles.prev}`}
-        onClick={prevSlide}
-      >
-        <ChevronLeft size={24} color="#000" />
-      </button>
-
-      <div className={styles.carouselTrackContainer}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-        >
-          {images.map((img, index) => (
-            <div key={index} className={styles.carouselSlide}>
-              <img src={img} alt={`Imagem ${index + 1}`} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <button
-        className={`${styles.carouselBtn} ${styles.next}`}
-        onClick={nextSlide}
-      >
-        <ChevronRight size={24} color="#000" />
-      </button>
-      <div className={styles.carouselDots}>
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ""}`}
-          />
-        ))}
-      </div>
-    </div>
   );
 }

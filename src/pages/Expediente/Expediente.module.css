@@ -22,7 +22,7 @@
 }
 
 .backButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-family: "Manrope", sans-serif;
@@ -31,6 +31,9 @@
   color: var(--cor-black);
   margin-bottom: 2rem;
   text-decoration: none;
+  padding: 1rem;
+  margin-left: -1rem;
+  width: fit-content;
 }
 
 .title {
@@ -79,7 +82,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
 }
@@ -127,31 +130,8 @@
   font-weight: 800;
   font-size: 0.75rem;
   color: var(--cor-brand-orange);
-  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.bio {
-  font-family: "Manrope", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.socials {
-  display: flex;
-  gap: 1.2rem;
-  margin-top: auto;
-  color: #ccc;
-}
-
-.socialLink {
-  color: var(--cor-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer {

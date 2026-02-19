@@ -1,15 +1,10 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import {
-  ArrowLeft,
-  ChevronLeft,
-  ChevronRight,
-  Film,
-  Pause,
-  Play,
-} from "lucide-react";
-import { useRef, useState } from "react";
+// import {ChevronRight, Film } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
+
+import { AudioPlayer, Carousel } from "../../../components";
 
 import hero from "../../../assets/saoGoncalo/img01.jpg";
 import imagem2 from "../../../assets/saoGoncalo/img02.jpg";
@@ -180,11 +175,12 @@ export function SaoGoncalo() {
           >
             <img
               src={IMAGES.img01}
-              alt="Dançadores de São Gonçalo"
+              alt="Brincantes  de São Gonçalo dançam durante apresentação. Foto: Isabela Davis"
               loading="lazy"
             />
             <figcaption>
-              Fig. 1 — O movimento circular dos devotos durante a celebração.
+              Brincantes de São Gonçalo dançam durante apresentação. <br></br>
+              Foto: Isabela Davis
             </figcaption>
           </motion.figure>
 
@@ -260,9 +256,14 @@ export function SaoGoncalo() {
             transition={{ duration: 0.4 }}
             className={styles.mediaContainer}
           >
-            <img src={IMAGES.img02} alt="Detalhe das fitas" loading="lazy" />
+            <img
+              src={IMAGES.img02}
+              alt="Barco com Santo, que é carregado pela Mariposa durante o cortejo. Foto: George Lucas"
+              loading="lazy"
+            />
             <figcaption>
-              Fig. 2 — As fitas representam as graças alcançadas.
+              Barco com Santo, que é carregado pela Mariposa durante o cortejo.{" "}
+              <br></br>Foto: George Lucas
             </figcaption>
           </motion.figure>
 
@@ -400,11 +401,12 @@ export function SaoGoncalo() {
           >
             <img
               src={IMAGES.img03}
-              alt="Vestimentas tradicionais"
+              alt="Reunião dos brincantes para cumprir a promessa. Foto: Isabela Davis."
               loading="lazy"
             />
             <figcaption>
-              Fig. 3 — A indumentária é preparada meses antes da festa.
+              Reunião dos brincantes para cumprir a promessa.<br></br>Foto:
+              Isabela Davis.
             </figcaption>
           </motion.figure>
 
@@ -428,6 +430,7 @@ export function SaoGoncalo() {
           <AudioPlayer
             title="CÂNTICO DE ENTRADA"
             src="../../assets/saoGoncalo/audio01.mp3"
+            legenda="Filho do patrão, Noah, canta a música de São Gonçalo."
           />
 
           <p>
@@ -478,9 +481,14 @@ export function SaoGoncalo() {
             transition={{ duration: 1 }}
             className={styles.mediaContainer}
           >
-            <img src={IMAGES.img04} alt="Músicos tocando" loading="lazy" />
+            <img
+              src={IMAGES.img04}
+              alt="Brincantes se preparam para o cortejo. Foto: Isabela Davis."
+              loading="lazy"
+            />
             <figcaption>
-              Fig. 4 — Os músicos acompanham o cortejo incansavelmente.
+              Brincantes se preparam para o cortejo.<br></br>Foto: Isabela
+              Davis.
             </figcaption>
           </motion.figure>
 
@@ -508,7 +516,7 @@ export function SaoGoncalo() {
             caminhar do lado dele”, afirma
           </p>
 
-          <motion.a
+          {/* <motion.a
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -529,7 +537,7 @@ export function SaoGoncalo() {
             >
               <ChevronRight size={24} />
             </motion.div>
-          </motion.a>
+          </motion.a> */}
 
           <p>
             Um dos principais fatores que tornam o São Gonçalo da Mussuca
@@ -637,22 +645,39 @@ export function SaoGoncalo() {
             apareçam em locais em que houve essa aculturação.
           </p>
 
-          <motion.div
+          <motion.figure
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className={styles.videoContainer}
+            style={{ margin: "5rem 0" }}
           >
-            <iframe
-              width="100%"
-              height="450"
-              src="https://www.youtube.com/embed/LXb3EKWsInQ"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </motion.div>
+            <div className={styles.videoContainer} style={{ margin: 0 }}>
+              <iframe
+                width="100%"
+                height="450"
+                src="https://www.youtube.com/embed/1_b9x9dMfk8?si=IJwd3u6BwrHQxP3V"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <figcaption
+              style={{
+                fontFamily: "var(--font-ui)",
+                fontSize: "1rem",
+                color: "#666",
+                marginTop: "1.2rem",
+                borderLeft: "5px solid var(--cor-primary)",
+                paddingLeft: "1rem",
+                fontStyle: "italic",
+              }}
+            >
+              Denisson demonstra a presença do ritmo nas diferentes
+              manifestações.
+            </figcaption>
+          </motion.figure>
 
           <p>
             O músico analisa que essas diferenças se ampliam ainda mais em
@@ -669,6 +694,7 @@ export function SaoGoncalo() {
           <AudioPlayer
             title="DEPOIMENTO DE MESTRE ZÉ"
             src={"../../assets/saoGoncalo/audio02.mp3"}
+            legenda="Grupo de São Gonçalo canta durante o cortejo."
           />
 
           <p>
@@ -691,7 +717,10 @@ export function SaoGoncalo() {
             dançar, o gingado. Na questão da nossa cor preta e do molejo”.
           </p>
 
-          <ImageCarousel images={IMAGES.carousel} />
+          <Carousel
+            images={IMAGES.carousel}
+            legenda="Participação do grupo durante o cortejo. Fotos: George Lucas e Isabela davis"
+          />
 
           <p>
             Além desse diferencial eles possuem uma forte presença de
@@ -742,106 +771,5 @@ function AnimatedSection({
         <motion.div variants={fadeInUp}>{children}</motion.div>
       )}
     </motion.section>
-  );
-}
-
-function AudioPlayer({ title, src }: { title: string; src: string }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) audioRef.current.pause();
-      else audioRef.current.play();
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  return (
-    <motion.div whileHover={{ scale: 1.01 }} className={styles.audioPlayerBox}>
-      <span className={styles.audioLabel}>OUÇA: {title}</span>
-      <div className={styles.audioControls}>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={togglePlay}
-          className={styles.playBtn}
-        >
-          {isPlaying ? (
-            <Pause size={20} color="#000" />
-          ) : (
-            <Play size={20} color="#000" />
-          )}
-        </motion.button>
-        <div className={styles.waveVisual}>
-          {[...Array(25)].map((_, i) => (
-            <motion.div
-              key={i}
-              animate={{
-                height: isPlaying ? [10, 30, 15, 25, 10] : 4,
-                opacity: isPlaying ? 1 : 0.3,
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 0.6,
-                delay: i * 0.03,
-                ease: "easeInOut",
-              }}
-              className={styles.waveBar}
-            />
-          ))}
-        </div>
-      </div>
-      <audio ref={audioRef} src={src} onEnded={() => setIsPlaying(false)} />
-    </motion.div>
-  );
-}
-
-function ImageCarousel({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-  return (
-    <div className={styles.carouselWrapper}>
-      <button
-        className={`${styles.carouselBtn} ${styles.prev}`}
-        onClick={prevSlide}
-      >
-        <ChevronLeft size={24} color="#000" />
-      </button>
-
-      <div className={styles.carouselTrackContainer}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-        >
-          {images.map((img, index) => (
-            <div key={index} className={styles.carouselSlide}>
-              <img src={img} alt={`Imagem ${index + 1}`} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <button
-        className={`${styles.carouselBtn} ${styles.next}`}
-        onClick={nextSlide}
-      >
-        <ChevronRight size={24} color="#000" />
-      </button>
-      <div className={styles.carouselDots}>
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ""}`}
-          />
-        ))}
-      </div>
-    </div>
   );
 }

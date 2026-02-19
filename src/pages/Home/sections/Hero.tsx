@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
-import cover from "../../../assets/images/contexto16-cover.png";
+import cover from "../../../assets/images/contexto-16-cover-02.png";
 
 export function Hero() {
   const handleScrollDown = () => {

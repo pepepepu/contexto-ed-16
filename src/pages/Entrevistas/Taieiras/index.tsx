@@ -1,6 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight, Lightbulb } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
 
@@ -15,9 +14,10 @@ import imagemCarrosel04 from "../../../assets/taieiras/imagemCarrosel04.jpg";
 import imagemCarrosel02_01 from "../../../assets/taieiras/imagemCarrosel02_01.jpg";
 import imagemCarrosel02_02 from "../../../assets/taieiras/imagemCarrosel02_02.jpg";
 
-import imagem04 from "../../../assets/taieiras/imagem04.png";
 import imagem03 from "../../../assets/taieiras/imagem03.jpg";
+import imagem04 from "../../../assets/taieiras/imagem04.png";
 import imagem05 from "../../../assets/taieiras/imagem05.jpg";
+import { Carousel } from "../../../components";
 
 const IMAGES = {
   hero: imagemCarrosel03,
@@ -251,7 +251,7 @@ export function Taieiras() {
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>SAGRADO E PROFANO</h2>
 
-          <ImageCarousel images={IMAGES.carousel_sagrado} />
+          <Carousel images={IMAGES.carousel_sagrado} />
 
           <p>
             Nas janelas vermelhas da Irmandade, está Bárbara Cristina. Com o
@@ -423,7 +423,7 @@ export function Taieiras() {
             não quererem ir, se perdem muito cedo [sobre a virgindade].”
           </p>
 
-          <ImageCarousel images={IMAGES.carousel_taieiras} />
+          <Carousel images={IMAGES.carousel_taieiras} />
 
           <p>
             Enquanto que, para Lorena, ser uma taieira não exige abdicações, a
@@ -695,54 +695,5 @@ function AnimatedSection({
         <motion.div variants={fadeInUp}>{children}</motion.div>
       )}
     </motion.section>
-  );
-}
-
-function ImageCarousel({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-  return (
-    <div className={styles.carouselWrapper}>
-      <button
-        className={`${styles.carouselBtn} ${styles.prev}`}
-        onClick={prevSlide}
-      >
-        <ChevronLeft size={24} color="#000" />
-      </button>
-
-      <div className={styles.carouselTrackContainer}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-        >
-          {images.map((img, index) => (
-            <div key={index} className={styles.carouselSlide}>
-              <img src={img} alt={`Imagem ${index + 1}`} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <button
-        className={`${styles.carouselBtn} ${styles.next}`}
-        onClick={nextSlide}
-      >
-        <ChevronRight size={24} color="#000" />
-      </button>
-      <div className={styles.carouselDots}>
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ""}`}
-          />
-        ))}
-      </div>
-    </div>
   );
 }

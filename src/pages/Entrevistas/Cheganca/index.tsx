@@ -1,8 +1,9 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "../entrevistas.module.css";
+
+import { Carousel } from "../../../components";
 
 import hero from "../../../assets/cheganca/imagem01.jpg";
 import imagemCarrosel01 from "../../../assets/cheganca/imagemCarrosel01.jpg";
@@ -131,7 +132,8 @@ export function Cheganca() {
           <span>
             Por:{" "}
             <strong>
-              Aline S., Eduarda S., Fernanda F., Larissa P. e Yasmim C.
+              Aline Souto, Eduarda Santos, Fernanda Felix, Larissa Prado e
+              Yasmim Carvalho
             </strong>
           </span>
         </motion.div>
@@ -162,7 +164,10 @@ export function Cheganca() {
             da terra natal, que já se tornou deles também.
           </p>
 
-          <ImageCarousel images={IMAGES.block1_carousel} />
+          <Carousel
+            images={IMAGES.block1_carousel}
+            legenda="Suas vestimentas trazem características visuais inesquecíveis em meio aos outros grupos. Fotos por: Larissa Prado e Yasmin Carvalho"
+          />
           <p>
             Com pilotos, primeiro tenente, cabo guardião, padres, marujos e
             muito mais, encontramos aqueles que encenam os ibéricos extasiados
@@ -341,7 +346,10 @@ export function Cheganca() {
             se sustentar e se apresentar
           </p>
 
-          <ImageCarousel images={IMAGES.block3_house} />
+          <Carousel
+            images={IMAGES.block3_house}
+            legenda="A preparação para o festejo vai além de roupas e ensaios, a relação interpessoal mostra-se essencial e o cuidado com os seus também. Fotos: Larissa Prado"
+          />
 
           <p>
             Os grupos folclóricos da Chegança enfrentam momentos difíceis há
@@ -370,7 +378,10 @@ export function Cheganca() {
             amigos dele com as roupas de marinheiro”, relembra
           </p>
 
-          <ImageCarousel images={IMAGES.block3_archive} />
+          <Carousel
+            images={IMAGES.block3_archive}
+            legenda="A força da Chegança Santa Cruz resiste em arquivos que documentam a fé e cultura como um lembrete para nunca desistirem. Fotos: Larissa Prado"
+          />
 
           <p>
             Hoje, à frente do grupo, Giselma lida com desafios financeiros para
@@ -408,7 +419,10 @@ export function Cheganca() {
             manter a Chegança ativa até onde for possível.
           </p>
 
-          <ImageCarousel images={IMAGES.block3_everybody} />
+          <Carousel
+            images={IMAGES.block3_everybody}
+            legenda="Com pessoas únicas e diversas, os dois grupos se unem no amor à tradição e na resistência cultural. "
+          />
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>
@@ -670,54 +684,5 @@ function AnimatedSection({
         <motion.div variants={fadeInUp}>{children}</motion.div>
       )}
     </motion.section>
-  );
-}
-
-function ImageCarousel({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-  return (
-    <div className={styles.carouselWrapper}>
-      <button
-        className={`${styles.carouselBtn} ${styles.prev}`}
-        onClick={prevSlide}
-      >
-        <ChevronLeft size={24} color="#000" />
-      </button>
-
-      <div className={styles.carouselTrackContainer}>
-        <motion.div
-          className={styles.carouselTrack}
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-        >
-          {images.map((img, index) => (
-            <div key={index} className={styles.carouselSlide}>
-              <img src={img} alt={`Imagem ${index + 1}`} />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
-      <button
-        className={`${styles.carouselBtn} ${styles.next}`}
-        onClick={nextSlide}
-      >
-        <ChevronRight size={24} color="#000" />
-      </button>
-      <div className={styles.carouselDots}>
-        {images.map((_, i) => (
-          <div
-            key={i}
-            className={`${styles.dot} ${currentIndex === i ? styles.activeDot : ""}`}
-          />
-        ))}
-      </div>
-    </div>
   );
 }
