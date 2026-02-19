@@ -64,9 +64,16 @@ export const equipe = [
     cor: "var(--cor-acid-yellow)",
   },
   {
-    id: 5,
-    nome: "Carol",
+    id: 15,
+    nome: "Breno Oseias",
     cargo: "Repórter",
+    foto: semNome,
+    cor: "#FCD000",
+  },
+  {
+    id: 5,
+    nome: "Carol Cavalcanti",
+    cargo: "Diretora de Redação",
     foto: carol,
     cor: "#f50800",
   },
@@ -132,13 +139,6 @@ export const equipe = [
     cargo: "Editora de Visualidades e Fotografias",
     foto: iasmin,
     cor: "#f50800",
-  },
-  {
-    id: 15,
-    nome: "Sem Nome",
-    cargo: "Repórter",
-    foto: semNome,
-    cor: "#FCD000",
   },
   {
     id: 16,
