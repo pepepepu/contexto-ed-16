@@ -115,8 +115,8 @@ export function Cheganca() {
             transition={{ delay: 0.7 }}
             className={styles.heroSubtitle}
           >
-            Entre a cruz e a espada: a história de uma das principais
-            manifestações religiosas e culturais do estado.
+            A história de uma das principais manifestações religiosas e
+            culturais do estado.
           </motion.p>
         </div>
       </header>
