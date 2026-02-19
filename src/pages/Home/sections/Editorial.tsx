@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Quote } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Editorial() {
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
 
   const containerVariants = {
@@ -51,10 +53,10 @@ export function Editorial() {
       >
         <motion.div
           animate={{ x: [0, -1000] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           style={{
             fontFamily: "var(--font-destaque-1)",
-            fontSize: "115rem",
+            fontSize: "clamp(40rem, 80vw, 115rem)",
             lineHeight: 1,
             color: "#000",
           }}
@@ -74,18 +76,19 @@ export function Editorial() {
           flexDirection: "column",
           justifyContent: "center",
           zIndex: 10,
-          padding: "clamp(1rem, 5vw, 4rem)",
+          padding: "clamp(1.5rem, 4vw, 4rem)",
+          maxWidth: "1700px",
+          margin: "0 auto",
+          width: "100%",
         }}
       >
         <div
           style={{
-            height: "100%",
-            padding: "clamp(2rem, 5vw, 4rem)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             position: "relative",
-            backdropFilter: "blur(5px)",
+            width: "100%",
           }}
         >
           <motion.div variants={itemVariants}>
@@ -93,7 +96,11 @@ export function Editorial() {
               size={64}
               color="var(--cor-black)"
               fill="var(--cor-black)"
-              style={{ marginBottom: "1rem", opacity: 0.8 }}
+              style={{
+                marginBottom: "clamp(1rem, 3vh, 2rem)",
+                width: "clamp(40px, 6vw, 64px)",
+                height: "clamp(40px, 6vw, 64px)",
+              }}
             />
           </motion.div>
 
@@ -101,21 +108,22 @@ export function Editorial() {
             variants={itemVariants}
             style={{
               fontFamily: "var(--font-destaque-1)",
-              fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
-              lineHeight: 0.85,
+              fontSize: "clamp(3rem, 8vw, 7.5rem)",
+              lineHeight: 0.95,
               textTransform: "uppercase",
               color: "var(--cor-black)",
-              marginBottom: "2rem",
+              marginBottom: "clamp(1.5rem, 4vh, 3rem)",
+              maxWidth: "100%",
+              wordWrap: "break-word",
             }}
           >
-            A Voz de <br />
+            Entre Fé e <br />
             <span
               style={{
                 color: "var(--cor-white)",
-                textShadow: "2px 2px 0 #000",
               }}
             >
-              Quem Crê
+              Cultura
             </span>
           </motion.h2>
 
@@ -123,36 +131,39 @@ export function Editorial() {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "2rem",
-              maxWidth: "800px",
+              gap: "clamp(1.5rem, 4vh, 2.5rem)",
+              maxWidth: "min(100%, 1000px)",
             }}
           >
             <motion.p
               variants={itemVariants}
               style={{
                 fontFamily: "'Manrope', sans-serif",
-                fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
+                fontSize: "clamp(1rem, 2vw, 1.5rem)",
                 lineHeight: 1.6,
                 fontWeight: 500,
                 color: "var(--cor-black)",
-                borderLeft: "4px solid var(--cor-black)",
-                paddingLeft: "1.5rem",
+                borderLeft: "3px solid var(--cor-black)",
+                paddingLeft: "clamp(1rem, 3vw, 2rem)",
               }}
             >
-              Nesta edição, exploramos as diversas manifestações de fé no
-              cenário urbano contemporâneo. O sagrado não está apenas nos
-              templos, mas nas esquinas, na arte e no silêncio.
+              Nesta edição, exploramos a fé como força viva que atravessa ruas,
+              praças e comunidades. Mais do que crença individual, ela se
+              manifesta em rituais, cantos, cortejos e celebrações que mantêm
+              vivas tradições e saberes.
             </motion.p>
 
             <motion.button
               variants={itemVariants}
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
+              onClick={() => navigate("/mensagem-dos-reporteres")}
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "1rem",
-                padding: "1.2rem 2.5rem",
+                gap: "clamp(0.5rem, 2vw, 1rem)",
+                padding:
+                  "clamp(0.8rem, 2vh, 1.2rem) clamp(1.5rem, 4vw, 2.5rem)",
                 border: "var(--border-thick)",
                 background: isHovered ? "var(--cor-black)" : "transparent",
                 color: isHovered ? "var(--cor-primary)" : "var(--cor-black)",
@@ -166,17 +177,23 @@ export function Editorial() {
                   fontFamily: "'Manrope', sans-serif",
                   fontWeight: 800,
                   textTransform: "uppercase",
-                  fontSize: "1.1rem",
+                  fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)",
                   letterSpacing: "0.1em",
                 }}
               >
-                Ler Carta do Editor
+                Mensagem dos repórteres
               </span>
               <motion.div
                 animate={{ x: isHovered ? 5 : 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <ArrowRight size={24} />
+                <ArrowRight
+                  size={24}
+                  style={{
+                    width: "clamp(20px, 3vw, 24px)",
+                    height: "clamp(20px, 3vw, 24px)",
+                  }}
+                />
               </motion.div>
             </motion.button>
           </div>

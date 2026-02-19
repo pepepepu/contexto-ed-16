@@ -2,44 +2,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Play, MonitorPlay } from "lucide-react";
 import { useState } from "react";
 
+import heroSaoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
+import heroBomJesus from "../../../assets/bomJesus/hero.jpg";
+
 const docs = [
   {
     id: 1,
-    titulo: "Fé na Estrada",
-    descricao:
-      "Uma jornada pelos caminhos de peregrinação no interior do Brasil.",
-    youtubeId: "LXb3EKWsInQ",
-    thumb:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop",
-    duracao: "24:00",
+    titulo: "A MARIPOSA DE SÃO GONÇALO",
+    youtubeId: "DDxgH7kmXHQ",
+    thumb: heroSaoGoncalo,
+    duracao: "9:59",
   },
   {
     id: 2,
-    titulo: "O Canto da Sereia",
-    descricao: "Documentário sobre as celebrações de Iemanjá em Salvador.",
-    youtubeId: "ysz5S6PUM-U",
-    thumb:
-      "https://images.unsplash.com/photo-1621258529368-80e9e436c0a7?q=80&w=800&auto=format&fit=crop",
-    duracao: "18:30",
-  },
-  {
-    id: 3,
-    titulo: "Arquitetura do Sagrado",
-    descricao: "Como as catedrais e terreiros moldam a paisagem urbana.",
-    youtubeId: "P89_tU8kXoE",
-    thumb:
-      "https://images.unsplash.com/photo-1548625361-12e61262d149?q=80&w=800&auto=format&fit=crop",
-    duracao: "45:15",
-  },
-  {
-    id: 4,
-    titulo: "Vozes do Gospel",
-    descricao:
-      "A ascensão da música gospel nas periferias das grandes metrópoles.",
-    youtubeId: "9bZkp7q19f0",
-    thumb:
-      "https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=800&auto=format&fit=crop",
-    duracao: "32:10",
+    titulo: "NA CORRENTEZA DO BOM JESUS ",
+    youtubeId: "dDiBKrlopfo",
+    thumb: heroBomJesus,
+    duracao: "9:16",
   },
 ];
 
@@ -57,7 +36,7 @@ export function Documentarios() {
     <div
       style={{
         width: "100%",
-        height: "100%",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
         backgroundColor: "var(--cor-black)",
@@ -106,11 +85,13 @@ export function Documentarios() {
           flexWrap: "wrap",
           gap: "2rem",
           alignItems: "flex-start",
+          height: "100%",
+          overflow: "hidden",
         }}
       >
         <div
           style={{
-            flex: "2 1 600px",
+            flex: "1 1 auto",
             width: "100%",
             maxWidth: "1000px",
           }}
@@ -118,6 +99,7 @@ export function Documentarios() {
           <div
             style={{
               width: "100%",
+              height: "auto",
               aspectRatio: "16/9",
               border: "1px solid #333",
               backgroundColor: "#111",
@@ -155,6 +137,9 @@ export function Documentarios() {
                     backgroundImage: `url(${activeDoc.thumb})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <div
@@ -162,6 +147,7 @@ export function Documentarios() {
                       position: "absolute",
                       inset: 0,
                       background: "rgba(0,0,0,0.3)",
+                      zIndex: 1,
                     }}
                   />
                   <motion.button
@@ -169,10 +155,8 @@ export function Documentarios() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
+                      position: "relative",
+                      zIndex: 2,
                       background: "rgba(255,255,255,0.1)",
                       backdropFilter: "blur(5px)",
                       border: "1px solid rgba(255,255,255,0.5)",
@@ -200,6 +184,7 @@ export function Documentarios() {
                   padding: "clamp(1rem, 2vw, 2rem)",
                   background: "linear-gradient(to top, black, transparent)",
                   pointerEvents: "none",
+                  zIndex: 2,
                 }}
               >
                 <motion.h3
@@ -216,24 +201,6 @@ export function Documentarios() {
                 >
                   {activeDoc.titulo}
                 </motion.h3>
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 }}
-                  key={activeDoc.descricao}
-                  style={{
-                    fontFamily: "Manrope, sans-serif",
-                    fontSize: "clamp(0.8rem, 1.5vw, 1rem)",
-                    maxWidth: "600px",
-                    opacity: 0.8,
-                    display: "-webkit-box",
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                  }}
-                >
-                  {activeDoc.descricao}
-                </motion.p>
               </div>
             )}
           </div>
@@ -245,8 +212,9 @@ export function Documentarios() {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            maxHeight: "600px",
+            height: "100%",
             overflowY: "auto",
+            overflowX: "hidden",
             paddingRight: "0.5rem",
           }}
           className="custom-scrollbar"
@@ -321,7 +289,7 @@ export function Documentarios() {
                     }}
                   />
 
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <h4
                       style={{
                         fontFamily: "var(--font-destaque-2)",
@@ -329,6 +297,9 @@ export function Documentarios() {
                         fontSize: "1rem",
                         margin: 0,
                         lineHeight: 1.1,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
                       }}
                     >
                       {doc.titulo}
@@ -352,6 +323,7 @@ export function Documentarios() {
                         height: "8px",
                         background: "red",
                         borderRadius: "50%",
+                        flexShrink: 0,
                       }}
                     />
                   )}

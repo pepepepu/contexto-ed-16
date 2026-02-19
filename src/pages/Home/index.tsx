@@ -78,8 +78,8 @@ export function Home() {
                 fontWeight: 600,
               }}
             >
-              Faces da Fé é um projeto construído por mais de 40 jornalistas,
-              fotógrafos e pesquisadores dedicados.
+              Faces da Fé é um projeto construído por estudantes e professores
+              do curso de jornalismo da Universidade Federal de Sergipe.
             </motion.p>
 
             <motion.button

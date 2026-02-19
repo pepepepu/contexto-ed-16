@@ -85,21 +85,13 @@ export function Taieiras() {
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <motion.span
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className={styles.heroCat}
-          >
-            CULTURA POPULAR
-          </motion.span>
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className={styles.heroTitle}
           >
-            TAIEIRAS
+            Entre fé e devoção, a tradição das Taieiras
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -121,10 +113,12 @@ export function Taieiras() {
           className={styles.articleMeta}
         >
           <span>
-            Por <strong>Redação Contexto</strong>
+            Por:{" "}
+            <strong>
+              Josielly Amaro, Maria Eduarda Gomes, Rossela Cecília e Larissa
+              Xavier.
+            </strong>
           </span>
-          <span>•</span>
-          <span>15 min de leitura</span>
         </motion.div>
 
         <AnimatedSection className={styles.contentBlock}>

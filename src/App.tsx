@@ -10,6 +10,7 @@ import { BomJesus } from "./pages/Entrevistas/BomJesus";
 import { Lavagem } from "./pages/Entrevistas/Lavagem";
 import { Penitentes } from "./pages/Entrevistas/Penitentes";
 import { Taieiras } from "./pages/Entrevistas/Taieiras";
+import { MensagemReporteres } from "./pages/MensagemDosReporteres";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,11 @@ function App() {
         <Route path="/reportagens/lavagem-conceicao" element={<Lavagem />} />
         <Route path="/reportagens/penitentes" element={<Penitentes />} />
         <Route path="/reportagens/taieiras" element={<Taieiras />} />
+
+        <Route
+          path="/mensagem-dos-reporteres"
+          element={<MensagemReporteres />}
+        />
       </Routes>
     </BrowserRouter>
   );

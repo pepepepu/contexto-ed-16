@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
+import cover from "../../../assets/images/contexto16-cover.png";
+
 export function Hero() {
   const handleScrollDown = () => {
     const firstSection = document.getElementById("editorial");
@@ -39,12 +41,9 @@ export function Hero() {
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.4,
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1606092195730-5d7b9af1ef4d?q=80&w=2070&auto=format&fit=crop")',
+          backgroundImage: `url(${cover})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "grayscale(100%) contrast(120%)",
         }}
       />
 
@@ -56,6 +55,7 @@ export function Hero() {
           alignItems: "center",
           marginTop: "5rem",
           gap: "10px",
+          mixBlendMode: "lighten",
         }}
       >
         <motion.h1
@@ -67,28 +67,14 @@ export function Hero() {
             fontSize: "clamp(4rem, 12vw, 9rem)",
             lineHeight: 0.9,
             textTransform: "uppercase",
-            color: "#fff",
             textShadow: "4px 4px 0px #000",
+            color: "#fff",
           }}
         >
           Faces
           <br />
           da Fé
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "1.2rem",
-            textTransform: "uppercase",
-            color: "var(--cor-primary)",
-            marginBottom: "1rem",
-          }}
-        >
-          O Sagrado no Cotidiano Urbano
-        </motion.p>
       </div>
 
       <motion.button
@@ -104,7 +90,7 @@ export function Hero() {
           bottom: "2rem",
           background: "transparent",
           border: "none",
-          color: "var(--cor-primary)",
+          color: "#fff",
           cursor: "pointer",
           display: "flex",
           flexDirection: "column",

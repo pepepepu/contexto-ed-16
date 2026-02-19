@@ -97,21 +97,13 @@ export function Lavagem() {
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <motion.span
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className={styles.heroCat}
-          >
-            TRADIÇÃO NAVAL
-          </motion.span>
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className={styles.heroTitle}
           >
-            LAVAGEM DA CONCEIÇÃO
+            A força da fé contra a frieza do ferro
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -135,10 +127,11 @@ export function Lavagem() {
           className={styles.articleMeta}
         >
           <span>
-            Por <strong>Redação Contexto</strong>
+            Por:{" "}
+            <strong>
+              Yan Lima, Maria Clara Batista, Raquel Lopes e Helen Basílio.
+            </strong>
           </span>
-          <span>•</span>
-          <span>12 min de leitura</span>
         </motion.div>
 
         <AnimatedSection className={styles.contentBlock}>

@@ -88,21 +88,13 @@ export function Penitentes() {
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <motion.span
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className={styles.heroCat}
-          >
-            TRADIÇÃO
-          </motion.span>
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className={styles.heroTitle}
           >
-            Penitentes
+            Uma tradição que se renova
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -126,10 +118,12 @@ export function Penitentes() {
           className={styles.articleMeta}
         >
           <span>
-            Por <strong>Redação Contexto</strong>
+            Por:{" "}
+            <strong>
+              Alice Mendonça, Ana Carolina Alves, Gustavo, Isla Silva e Maria
+              Eduarda Rocha.
+            </strong>
           </span>
-          <span>•</span>
-          <span>10 min de leitura</span>
         </motion.div>
 
         <AnimatedSection className={styles.contentBlock}>

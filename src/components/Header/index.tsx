@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Menu, Search, User } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import type { SectionLink } from "../../types/interfaces";
 import styles from "./Header.module.css";
 
@@ -78,10 +77,6 @@ function Header({ title, sections }: HeaderProps) {
   return (
     <motion.header className={styles.headerWrapper}>
       <div className={styles.topBar}>
-        <button className={styles.iconButton} aria-label="Perfil">
-          <User size={28} strokeWidth={2} color="var(--cor-black)" />
-        </button>
-
         <div className={styles.logoContainer}>
           <motion.h1
             className={styles.title}
@@ -90,15 +85,6 @@ function Header({ title, sections }: HeaderProps) {
           >
             {title}
           </motion.h1>
-        </div>
-
-        <div style={{ display: "flex", gap: "0.5rem" }}>
-          <button className={styles.iconButton} aria-label="Buscar">
-            <Search size={28} strokeWidth={2} color="var(--cor-black)" />
-          </button>
-          <button className={styles.iconButton} aria-label="Menu">
-            <Menu size={28} strokeWidth={2} color="var(--cor-black)" />
-          </button>
         </div>
       </div>
 

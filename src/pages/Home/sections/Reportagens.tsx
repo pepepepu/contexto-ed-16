@@ -16,7 +16,6 @@ const noticias = [
     titulo: "Celebração do São Gonçalo na Mussuca",
     subtitulo:
       "Da liderança de Neilton Santana à preparação dos novos brincantes, a comunidade da Mussuca garante que a tradição do São Gonçalo atravesse séculos sem perder o fôlego",
-    tag: "Cultura",
     img: saoGoncalo,
     link: "/reportagens/sao-goncalo",
   },
@@ -25,7 +24,6 @@ const noticias = [
     titulo: "Entre a cruz e a espada, a Chegança em Sergipe",
     subtitulo:
       "A história de uma das principais manifestações religiosas e culturais do estado, que atravessa gerações e resiste ao apagamento",
-    tag: "Cultura",
     img: cheganca,
     link: "/reportagens/cheganca",
   },
@@ -34,7 +32,6 @@ const noticias = [
     titulo: "Tradição que resiste sobre as águas",
     subtitulo:
       "O cortejo de Bom Jesus dos Navegantes representa uma manifestação religiosa e cultural passada em família, de geração para geração",
-    tag: "Cultura",
     img: bomJesus,
     link: "/reportagens/bom-jesus",
   },
@@ -43,7 +40,6 @@ const noticias = [
     titulo: "A força da fé contra a frieza do ferro",
     subtitulo:
       "A Lavagem da Conceição completou 43 anos em Aracaju e revelou, entre memórias, ritos e tensões, como o sincretismo religioso segue vivo mesmo diante de igrejas que fecham seus portões com cadeados",
-    tag: "Cultura",
     img: lavagem,
     link: "/reportagens/lavagem-conceicao",
   },
@@ -52,7 +48,6 @@ const noticias = [
     titulo: "Uma tradição que se renova",
     subtitulo:
       "Na Capital Sergipana da Fé, existe um grupo — os penitentes — que contrariou previsões de que estariam prestes a ruir e que hoje se mostram mais fortes que nunca",
-    tag: "Cultura",
     img: penitentes,
     link: "/reportagens/penitentes",
   },
@@ -61,7 +56,6 @@ const noticias = [
     titulo: "Entre fé e devoção, a tradição das Taieiras",
     subtitulo:
       "Apesar da força cultural e religiosa, o grupo enfrenta desafios",
-    tag: "Cultura",
     img: taieiras,
     link: "/reportagens/taieiras",
   },
@@ -100,6 +94,7 @@ export function Reportagens() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-end",
+          borderBottom: "var(--border-thick)",
         }}
       >
         <h2
@@ -109,14 +104,13 @@ export function Reportagens() {
             color: "var(--cor-brand-orange)",
             lineHeight: 1,
             textTransform: "uppercase",
-            margin: 0,
-            textShadow: "2px 1px 0px #000",
+            marginBottom: 15,
           }}
         >
           Reportagens
         </h2>
 
-        <div style={{ display: "flex", gap: "1rem" }}>
+        <div style={{ display: "flex", gap: "1rem", marginBottom: 15 }}>
           <button
             onClick={() => scroll("left")}
             style={{
@@ -164,6 +158,7 @@ export function Reportagens() {
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           width: "100%",
+          alignItems: "stretch",
         }}
         className="hide-scrollbar"
       >
@@ -180,37 +175,37 @@ function Card({ data }: { data: (typeof noticias)[0] }) {
   const hasLink = data.link && data.link !== "#";
 
   const containerStyle: React.CSSProperties = {
-    minWidth: "clamp(300px, 100vw, 380px)",
     width: "clamp(300px, 85vw, 380px)",
-    height: "55vh",
-    minHeight: "450px",
+    height: "auto",
+    display: "flex",
     scrollSnapAlign: "start",
     flexShrink: 0,
     textDecoration: "none",
+    backgroundColor: "#fff",
     color: "inherit",
     cursor: "pointer",
     position: "relative",
-    display: "block",
   };
 
   const CardContent = (
     <motion.article
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -8, boxShadow: "8px 8px 0px rgba(0, 0, 0, 1)" }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       style={{
         border: "var(--border-thick)",
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#fff",
-        height: "100%",
+        flex: 1,
         width: "100%",
       }}
     >
       <div
         style={{
-          flex: 3,
+          height: "clamp(220px, 35vh, 280px)",
+          flexShrink: 0,
           overflow: "hidden",
           borderBottom: "var(--border-thick)",
           position: "relative",
@@ -237,31 +232,11 @@ function Card({ data }: { data: (typeof noticias)[0] }) {
             objectFit: "cover",
           }}
         />
-
-        <div
-          style={{
-            position: "absolute",
-            top: "1rem",
-            left: "1rem",
-            backgroundColor: "var(--cor-brand-orange)",
-            color: "white",
-            padding: "0.25rem 0.75rem",
-            fontFamily: "Manrope, sans-serif",
-            fontWeight: 800,
-            fontSize: "0.75rem",
-            textTransform: "uppercase",
-            zIndex: 2,
-            border: "1px solid black",
-            boxShadow: "2px 2px 0px black",
-          }}
-        >
-          {data.tag}
-        </div>
       </div>
 
       <div
         style={{
-          flex: 2,
+          flex: 1,
           padding: "1.5rem",
           display: "flex",
           flexDirection: "column",
@@ -291,7 +266,7 @@ function Card({ data }: { data: (typeof noticias)[0] }) {
               color: "#555",
               fontWeight: 500,
               display: "-webkit-box",
-              WebkitLineClamp: 3,
+              WebkitLineClamp: 4,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
             }}
@@ -305,7 +280,7 @@ function Card({ data }: { data: (typeof noticias)[0] }) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginTop: "1rem",
+            marginTop: "1.5rem",
             borderTop: "1px solid #eee",
             paddingTop: "1rem",
           }}

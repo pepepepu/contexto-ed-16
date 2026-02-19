@@ -1,43 +1,33 @@
 import { motion } from "framer-motion";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Headphones,
-  Play,
-  AudioLines,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Headphones, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
 const podcasts = [
   {
     id: 1,
-    programa: "O Som das Ruas",
-    episodio: "A Fé no Funk e o Sagrado na Periferia",
-    duracao: "45 min",
+    programa: "Episódio 01",
+    episodio: "APRESENTAÇÃO",
     capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
     link: "#",
   },
   {
     id: 2,
-    programa: "Diálogos Sagrados",
-    episodio: "Sincretismo Hoje: Onde os Santos se Encontram",
-    duracao: "32 min",
+    programa: "Episódio 02",
+    episodio: "DESCIDÃO DOS QUILOMBOLAS ",
     capa: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=800&auto=format&fit=crop",
     link: "#",
   },
   {
     id: 3,
-    programa: "Vozes da Cidade",
-    episodio: "O Silêncio Urbano e a Meditação no Caos",
-    duracao: "58 min",
+    programa: "Episódio 03",
+    episodio: "PINTADOS ITAMARINÁ",
     capa: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop",
     link: "#",
   },
   {
     id: 4,
-    programa: "Faces Tech",
-    episodio: "Algoritmos da Fé: Religião na Era da IA",
-    duracao: "28 min",
+    programa: "Episódio 04",
+    episodio: "PRAVIVER WORSHIP",
     capa: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
     link: "#",
   },
@@ -49,7 +39,7 @@ export function Especiais() {
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
       const { current } = carouselRef;
-      const scrollAmount = direction === "left" ? -382 : 382;
+      const scrollAmount = direction === "left" ? -350 : 350;
       current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -63,7 +53,7 @@ export function Especiais() {
         flexDirection: "column",
         justifyContent: "center",
         backgroundColor: "var(--cor-alert)",
-        padding: "2rem clamp(1rem, 5vw, 4rem)",
+        padding: "4rem clamp(1rem, 5vw, 4rem)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -77,6 +67,8 @@ export function Especiais() {
           borderBottom: "var(--border-thick)",
           paddingBottom: "1rem",
           borderColor: "var(--cor-black)",
+          flexWrap: "wrap",
+          gap: "1rem",
         }}
       >
         <div>
@@ -93,7 +85,7 @@ export function Especiais() {
               style={{
                 fontFamily: "Manrope, sans-serif",
                 fontWeight: 800,
-                fontSize: "0.9rem",
+                fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                 textTransform: "uppercase",
               }}
             >
@@ -103,14 +95,14 @@ export function Especiais() {
           <h2
             style={{
               fontFamily: "var(--font-destaque-1)",
-              fontSize: "clamp(2.5rem, 6vw, 5rem)",
+              fontSize: "clamp(2rem, 5vw, 4.5rem)",
               color: "var(--cor-black)",
-              lineHeight: 0.9,
+              lineHeight: 1,
               textTransform: "uppercase",
               margin: 0,
             }}
           >
-            Especiais
+            PODCAST DEVOÇÃO EM TOM MAIOR
           </h2>
         </div>
 
@@ -120,7 +112,7 @@ export function Especiais() {
             style={{
               background: "transparent",
               border: "var(--border-thick)",
-              padding: "0.8rem",
+              padding: "clamp(0.5rem, 2vw, 0.8rem)",
               cursor: "pointer",
               transition: "transform 0.2s",
               display: "flex",
@@ -136,7 +128,7 @@ export function Especiais() {
             style={{
               background: "var(--cor-black)",
               border: "var(--border-thick)",
-              padding: "0.8rem",
+              padding: "clamp(0.5rem, 2vw, 0.8rem)",
               cursor: "pointer",
               transition: "transform 0.2s",
               display: "flex",
@@ -154,13 +146,13 @@ export function Especiais() {
         ref={carouselRef}
         style={{
           display: "flex",
-          gap: "2rem",
+          gap: "clamp(1rem, 3vw, 2rem)",
           overflowX: "auto",
           scrollSnapType: "x mandatory",
-          paddingBottom: "2rem",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           width: "100%",
+          alignItems: "stretch",
         }}
         className="hide-scrollbar"
       >
@@ -182,14 +174,11 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       style={{
-        minWidth: "clamp(280px, 100vw, 380px)",
-        width: "clamp(280px, 85vw, 380px)",
-        height: "55vh",
-        minHeight: "450px",
-
+        width: "clamp(260px, 80vw, 320px)",
+        height: "auto",
+        minHeight: "clamp(300px, 45vh, 380px)",
         flexShrink: 0,
         scrollSnapAlign: "start",
-
         position: "relative",
         border: "var(--border-thick)",
         display: "flex",
@@ -197,16 +186,18 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
         cursor: "pointer",
         backgroundColor: "#fff",
         textDecoration: "none",
+        marginTop: "10px",
       }}
-      whileHover={{ y: -8, boxShadow: "8px 8px 0px rgba(0,0,0,0.2)" }}
+      whileHover={{ y: -8, boxShadow: "8px 8px 0px rgba(0, 0, 0, 1)" }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       <div
         style={{
-          height: "250px",
+          height: "clamp(160px, 25vh, 200px)",
           overflow: "hidden",
           borderBottom: "var(--border-thick)",
           position: "relative",
+          flexShrink: 0,
         }}
       >
         <motion.div
@@ -235,28 +226,6 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
         <div
           style={{
             position: "absolute",
-            top: "1rem",
-            left: "1rem",
-            backgroundColor: "var(--cor-black)",
-            color: "var(--cor-acid-yellow)",
-            padding: "0.25rem 0.75rem",
-            fontFamily: "Manrope, sans-serif",
-            fontWeight: 800,
-            fontSize: "0.75rem",
-            textTransform: "uppercase",
-            zIndex: 2,
-            border: "1px solid var(--cor-acid-yellow)",
-            display: "flex",
-            alignItems: "center",
-            gap: "0.3rem",
-          }}
-        >
-          <AudioLines size={14} /> {data.duracao}
-        </div>
-
-        <div
-          style={{
-            position: "absolute",
             inset: 0,
             display: "flex",
             alignItems: "center",
@@ -269,8 +238,8 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             animate={{ scale: isHovered ? 1 : 0, opacity: isHovered ? 1 : 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             style={{
-              width: "64px",
-              height: "64px",
+              width: "clamp(48px, 8vw, 64px)",
+              height: "clamp(48px, 8vw, 64px)",
               borderRadius: "50%",
               backgroundColor: "var(--cor-brand-orange)",
               border: "var(--border-thick)",
@@ -281,7 +250,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             }}
           >
             <Play
-              size={32}
+              size={28}
               fill="#000"
               color="#000"
               style={{ marginLeft: "4px" }}
@@ -293,7 +262,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
       <div
         style={{
           flex: 1,
-          padding: "1.5rem",
+          padding: "clamp(1rem, 3vw, 1.5rem)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -305,7 +274,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             style={{
               display: "block",
               fontFamily: "Manrope, sans-serif",
-              fontSize: "0.8rem",
+              fontSize: "clamp(0.7rem, 1.5vw, 0.8rem)",
               fontWeight: 700,
               color: "#666",
               textTransform: "uppercase",
@@ -319,7 +288,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
           <h3
             style={{
               fontFamily: "var(--font-destaque-2)",
-              fontSize: "1.4rem",
+              fontSize: "clamp(1.1rem, 3vw, 1.3rem)",
               lineHeight: 1.1,
               textTransform: "uppercase",
               color: "var(--cor-black)",
@@ -335,7 +304,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginTop: "1.5rem",
+            marginTop: "1rem",
             borderTop: "1px solid #eee",
             paddingTop: "1rem",
           }}
@@ -344,7 +313,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             style={{
               fontFamily: "Manrope, sans-serif",
               fontWeight: 800,
-              fontSize: "0.85rem",
+              fontSize: "clamp(0.75rem, 2vw, 0.85rem)",
               color: isHovered ? "var(--cor-brand-orange)" : "var(--cor-black)",
               transition: "color 0.2s",
             }}
@@ -357,7 +326,7 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
             }}
           >
             <Play
-              size={20}
+              size={18}
               fill={isHovered ? "var(--cor-brand-orange)" : "transparent"}
               color={isHovered ? "var(--cor-brand-orange)" : "black"}
             />
