@@ -35,40 +35,15 @@ import yan from "../../assets/expediente/expediente (3).jpeg";
 import yasmin from "../../assets/expediente/expediente (32).jpg";
 
 export const equipe = [
-  {
-    id: 1,
-    nome: "Alice Mendonça",
-    cargo: "Repórter",
-    foto: alice,
-    cor: "var(--cor-primary)",
-  },
+  // ========================
+  // DIRETORES DE REDAÇÃO
+  // ========================
   {
     id: 2,
     nome: "Alice",
     cargo: "Diretora de Redação",
     foto: alice2,
     cor: "var(--cor-brand-orange)",
-  },
-  {
-    id: 3,
-    nome: "Aline Souto",
-    cargo: "Repórter",
-    foto: aline,
-    cor: "var(--cor-alert)",
-  },
-  {
-    id: 4,
-    nome: "Ana Carolina Alves",
-    cargo: "Repórter Fotográfica",
-    foto: anaC,
-    cor: "var(--cor-acid-yellow)",
-  },
-  {
-    id: 15,
-    nome: "Breno Oseias",
-    cargo: "Repórter",
-    foto: semNome,
-    cor: "#FCD000",
   },
   {
     id: 5,
@@ -78,36 +53,37 @@ export const equipe = [
     cor: "#f50800",
   },
   {
-    id: 6,
-    nome: "Carolina Cardoso",
-    cargo: "Repórter",
-    foto: carolinaC,
-    cor: "#FCD000",
-  },
-  {
     id: 7,
     nome: "Demétrio de Azeredo",
     cargo: "Diretor de Redação",
     foto: demetrio,
     cor: "#FC8400",
   },
+
+  // ========================
+  // EDITOR CHEFE
+  // ========================
   {
-    id: 8,
-    nome: "Eduarda Rocha",
-    cargo: "Repórter",
-    foto: eduardaR,
-    cor: "#F54F00",
+    id: 19,
+    nome: "Josino",
+    cargo: "Editor Chefe",
+    foto: josino,
+    cor: "var(--cor-primary)",
   },
+
+  // ========================
+  // OUTROS EDITORES
+  // ========================
   {
-    id: 9,
-    nome: "Eduarda Santos",
-    cargo: "Repórter",
-    foto: eduardaS,
-    cor: "#F2EA00",
+    id: 33,
+    nome: "Valter Davi",
+    cargo: "Sub-editor Chefe",
+    foto: valter,
+    cor: "#FCD000",
   },
   {
     id: 10,
-    nome: "Eduarto",
+    nome: "Eduardo",
     cargo: "Editor de Texto",
     foto: eduardo,
     cor: "var(--cor-primary)",
@@ -127,10 +103,10 @@ export const equipe = [
     cor: "var(--cor-alert)",
   },
   {
-    id: 13,
-    nome: "Helen",
-    cargo: "Repórter",
-    foto: helen,
+    id: 22,
+    nome: "Lauan Brito",
+    cargo: "Sub-Editor de Site",
+    foto: lauan,
     cor: "var(--cor-acid-yellow)",
   },
   {
@@ -139,6 +115,73 @@ export const equipe = [
     cargo: "Editora de Visualidades e Fotografias",
     foto: iasmin,
     cor: "#f50800",
+  },
+  {
+    id: 31,
+    nome: "Sarah Lima",
+    cargo: "Editora Audiovisual",
+    foto: sarah,
+    cor: "var(--cor-acid-yellow)",
+  },
+
+  // ========================
+  // REPÓRTERES
+  // ========================
+  {
+    id: 1,
+    nome: "Alice Mendonça",
+    cargo: "Repórter",
+    foto: alice,
+    cor: "var(--cor-primary)",
+  },
+  {
+    id: 3,
+    nome: "Aline Souto",
+    cargo: "Repórter",
+    foto: aline,
+    cor: "var(--cor-alert)",
+  },
+  {
+    id: 4,
+    nome: "Ana Carolina Alves",
+    cargo: "Repórter",
+    foto: anaC,
+    cor: "var(--cor-acid-yellow)",
+  },
+  {
+    id: 15,
+    nome: "Breno Oseias",
+    cargo: "Repórter",
+    foto: semNome,
+    cor: "#FCD000",
+  },
+  {
+    id: 6,
+    nome: "Carolina Cardoso",
+    cargo: "Repórter",
+    foto: carolinaC,
+    cor: "#FCD000",
+  },
+  {
+    id: 8,
+    nome: "Eduarda Rocha",
+    cargo: "Repórter",
+    foto: eduardaR,
+    cor: "#F54F00",
+  },
+  {
+    id: 9,
+    nome: "Eduarda Santos",
+    cargo: "Repórter",
+    foto: eduardaS,
+    cor: "#F2EA00",
+  },
+  {
+    id: 13,
+    nome: "Helen",
+    cargo: "Repórter",
+    foto: helen,
+    cor: "var(--cor-acid-yellow)",
   },
   {
     id: 16,
@@ -162,13 +205,6 @@ export const equipe = [
     cor: "#F2EA00",
   },
   {
-    id: 19,
-    nome: "Josino",
-    cargo: "Editor Chefe",
-    foto: josino,
-    cor: "var(--cor-primary)",
-  },
-  {
     id: 20,
     nome: "Laila",
     cargo: "Repórter",
@@ -181,13 +217,6 @@ export const equipe = [
     cargo: "Repórter",
     foto: larissa,
     cor: "var(--cor-alert)",
-  },
-  {
-    id: 22,
-    nome: "Lauan Brito",
-    cargo: "Sub-Editor de Site",
-    foto: lauan,
-    cor: "var(--cor-acid-yellow)",
   },
   {
     id: 23,
@@ -246,25 +275,11 @@ export const equipe = [
     cor: "var(--cor-alert)",
   },
   {
-    id: 31,
-    nome: "Sarah Lima",
-    cargo: "Editora Audiovisual",
-    foto: sarah,
-    cor: "var(--cor-acid-yellow)",
-  },
-  {
     id: 32,
     nome: "Sayonara",
     cargo: "Repórter",
     foto: sayonara,
     cor: "#f50800",
-  },
-  {
-    id: 33,
-    nome: "Valrwe Davi",
-    cargo: "Sub-editor Chefe",
-    foto: valter,
-    cor: "#FCD000",
   },
   {
     id: 34,
