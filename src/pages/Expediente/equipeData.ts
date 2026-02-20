@@ -39,18 +39,18 @@ export const equipe = [
   // DIRETORES DE REDAÇÃO
   // ========================
   {
-    id: 2,
-    nome: "Alice",
-    cargo: "Diretora de Redação",
-    foto: alice2,
-    cor: "var(--cor-brand-orange)",
-  },
-  {
     id: 5,
     nome: "Carol Cavalcanti",
     cargo: "Diretora de Redação",
     foto: carol,
     cor: "#f50800",
+  },
+  {
+    id: 2,
+    nome: "Alice",
+    cargo: "Diretora de Redação",
+    foto: alice2,
+    cor: "var(--cor-brand-orange)",
   },
   {
     id: 7,
