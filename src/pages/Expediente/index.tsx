@@ -58,8 +58,8 @@ export function Expediente() {
           transition={{ delay: 0.4 }}
           className={styles.subtitle}
         >
-          Faces da Fé é um projeto coletivo que envolve mais de 40 profissionais
-          dedicados a registrar a pluralidade das crenças.
+          Faces da Fé é um projeto construído por estudantes e professores do
+          curso de jornalismo da Universidade Federal de Sergipe.
         </motion.p>
       </header>
 
