@@ -106,9 +106,6 @@ export function BomJesus() {
           </span>
         </motion.div>
         <AnimatedSection className={styles.contentBlock}>
-          <h2 className={styles.sectionTitle}>
-            TRADIÇÃO QUE RESISTE SOBRE AS ÁGUAS
-          </h2>
           <p>
             Reverenciada nas ruas de Aracaju e protegida pelas águas do rio
             Sergipe, a procissão do Bom Jesus dos Navegantes se mantém viva ano
@@ -164,7 +161,10 @@ export function BomJesus() {
             className={styles.mediaContainer}
           >
             <img src={IMAGES.img01} alt="" loading="lazy" />
-            <figcaption></figcaption>
+            <figcaption>
+              Morador antigo do Santo Antônio, Seu Antônio Aciole luta para
+              preservar a memória do bairro. Foto: Sayonara Gomes
+            </figcaption>
           </motion.figure>
           <p>
             Em frente à Igreja Santo Antônio, reside o Senhor Antônio Aciole,
@@ -249,7 +249,12 @@ export function BomJesus() {
             className={styles.mediaContainer}
           >
             <img src={IMAGES.img02} alt="" loading="lazy" />
-            <figcaption></figcaption>
+            <figcaption>
+              {" "}
+              Enquanto houver amor pelo rio e ensinamento de pai, o tototó
+              resiste. Pela tradição, pela Barra e por Bom Jesus. Foto : Letícia
+              Amarante
+            </figcaption>
           </motion.figure>
           <p>
             Acompanhante da procissão desde criança, Seu Pedro Henrique Almeida,
@@ -329,7 +334,10 @@ export function BomJesus() {
             Ivanira Lemos"
               loading="lazy"
             />
-            <figcaption>Dona Ivanira Lemos</figcaption>
+            <figcaption>
+              Dona Ivanira Lemos trabalha para continuar as tradições da
+              comunidade de fé do Bairro Santo Antônio. Foto : Letícia Amarante
+            </figcaption>
           </motion.figure>
           <p>
             No pé da Colina do Santo Antônio, mora uma das figuras centrais da
@@ -433,7 +441,10 @@ export function BomJesus() {
             className={styles.mediaContainer}
           >
             <img src={IMAGES.img04} alt="Albino Silva" loading="lazy" />
-            <figcaption>Albino Silva</figcaption>
+            <figcaption>
+              Albino Silva preserva os ensinamentos e as tradições do pai
+              através de Bom Jesus todo ano. Foto : Letícia Amarante
+            </figcaption>
           </motion.figure>
           <p>
             Albino Silva é um dos nomes que ajudam a manter viva a tradição da
@@ -504,7 +515,11 @@ export function BomJesus() {
             className={styles.mediaContainer}
           >
             <img src={IMAGES.img05} alt="Maria Auleína" loading="lazy" />
-            <figcaption>Maria Auleína</figcaption>
+            <figcaption>
+              Maria Auleína, é uma mulher de muita fé, que continua a dedicar a
+              sua vida à herança da tradição católica que herdou da sua mãe
+              desde muito nova. Foto : Letícia Amarante
+            </figcaption>
           </motion.figure>
           <p>
             Assim como para muitos, a fé também foi uma herança de família para
@@ -563,7 +578,11 @@ export function BomJesus() {
             className={styles.mediaContainer}
           >
             <img src={IMAGES.img06} alt="Seu Antônio" loading="lazy" />
-            <figcaption>Seu Antônio</figcaption>
+            <figcaption>
+              No alto da colina do Santo Antônio, há um guardião, Seu Antônio ou
+              Galo, nunca deixa a Igreja mesmo em dia de procissão. Foto :
+              Letícia Amarante
+            </figcaption>
           </motion.figure>
           <p>
             As tradições religiosas com o tempo se tornam também culturais,

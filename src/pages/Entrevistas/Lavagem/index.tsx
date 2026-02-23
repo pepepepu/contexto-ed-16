@@ -129,7 +129,7 @@ export function Lavagem() {
           <span>
             Por:{" "}
             <strong>
-              Yan Lima, Maria Clara Batista, Raquel Lopes e Helen Basílio.
+              Helen Basilio, Maria Clara Batista, Raquel Lopes e Yan Lima
             </strong>
           </span>
         </motion.div>
@@ -311,7 +311,7 @@ export function Lavagem() {
 
           <Carousel
             images={IMAGES.carouselSection2_1}
-            legenda="Celebrar e resistir; a tradição que se mantém viva em cada passo do cortejo pelas ruas de Aracaju. Foto: Raquel Lopes"
+            legenda="Celebrar e resistir; a tradição que se mantém viva em cada passo do cortejo pelas ruas de Aracaju. Fotos: Raquel Lopes"
           />
 
           <p>
@@ -357,7 +357,7 @@ export function Lavagem() {
 
           <Carousel
             images={IMAGES.carouselSection2_2}
-            legenda="Em 2025, a temática do ano foi “A missão dos iniciados como Guardiões do Sagrado e luta contra a intolerância religiosa”. Foto: Yan Lima"
+            legenda="Em 2025, a temática do ano foi “A missão dos iniciados como Guardiões do Sagrado e luta contra a intolerância religiosa”. Fotos: Yan Lima"
           />
 
           <p>
@@ -540,7 +540,7 @@ export function Lavagem() {
 
           <Carousel
             images={IMAGES.carouselSection3_1}
-            legenda="Enquanto as portas se mantinham abertas, os portões de ferro afastaram os fiéis do centro católico. Foto: Raquel Lopes"
+            legenda="Enquanto as portas se mantinham abertas, os portões de ferro afastaram os fiéis do centro católico. Fotos: Raquel Lopes"
           />
 
           <p>
@@ -590,6 +590,10 @@ export function Lavagem() {
             queremos ocupar este espaço; nós já temos o nosso"
           </motion.div>
 
+          <p className={styles.figcaption}>
+            Éden Brisio, artista e integrante da comunidade do Axé
+          </p>
+
           <p>
             Mas isso não impediu que a manifestação continuasse. Cantos e mais
             cantos eram ouvidos; danças e mais danças eram vistas. As vozes
@@ -620,7 +624,7 @@ export function Lavagem() {
 
           <Carousel
             images={IMAGES.carouselSection3_2}
-            legenda="Menos de 10 minutos que a festa tinha se encerrado, as flores amarelas foram descartadas pela Igreja.  Foto: Raquel Lopes"
+            legenda="Menos de 10 minutos que a festa tinha se encerrado, as flores amarelas foram descartadas pela Igreja.  Fotos: Raquel Lopes"
           />
         </AnimatedSection>
       </main>

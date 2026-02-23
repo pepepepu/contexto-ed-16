@@ -39,22 +39,23 @@ export const equipe = [
   // DIRETORES DE REDAÇÃO
   // ========================
   {
+    id: 2,
+    nome: "Alice Andrade",
+    cargo: "Diretora de Redação",
+    foto: alice2,
+    cor: "var(--cor-brand-orange)",
+  },
+  {
     id: 5,
     nome: "Carol Cavalcanti",
     cargo: "Diretora de Redação",
     foto: carol,
     cor: "#f50800",
   },
-  {
-    id: 2,
-    nome: "Alice",
-    cargo: "Diretora de Redação",
-    foto: alice2,
-    cor: "var(--cor-brand-orange)",
-  },
+
   {
     id: 7,
-    nome: "Demétrio de Azeredo",
+    nome: "Demétrio de Azeredo Soster",
     cargo: "Diretor de Redação",
     foto: demetrio,
     cor: "#FC8400",
@@ -65,7 +66,7 @@ export const equipe = [
   // ========================
   {
     id: 19,
-    nome: "Josino",
+    nome: "Josino Tavares",
     cargo: "Editor Chefe",
     foto: josino,
     cor: "var(--cor-primary)",
@@ -83,7 +84,7 @@ export const equipe = [
   },
   {
     id: 10,
-    nome: "Eduardo",
+    nome: "Eduardo Brito",
     cargo: "Editor de Texto",
     foto: eduardo,
     cor: "var(--cor-primary)",
@@ -163,6 +164,13 @@ export const equipe = [
     cor: "#FCD000",
   },
   {
+    id: 24,
+    nome: "Eduarda Gomes",
+    cargo: "Repórter",
+    foto: madu,
+    cor: "#FCD000",
+  },
+  {
     id: 8,
     nome: "Eduarda Rocha",
     cargo: "Repórter",
@@ -178,7 +186,7 @@ export const equipe = [
   },
   {
     id: 13,
-    nome: "Helen",
+    nome: "Helen Basilio",
     cargo: "Repórter",
     foto: helen,
     cor: "var(--cor-acid-yellow)",
@@ -192,7 +200,7 @@ export const equipe = [
   },
   {
     id: 17,
-    nome: "Jairo",
+    nome: "Jairo Santos",
     cargo: "Repórter",
     foto: jairo,
     cor: "#F54F00",
@@ -206,7 +214,7 @@ export const equipe = [
   },
   {
     id: 20,
-    nome: "Laila",
+    nome: "Laila Monteiro",
     cargo: "Repórter",
     foto: laíla,
     cor: "var(--cor-brand-orange)",
@@ -226,22 +234,15 @@ export const equipe = [
     cor: "#f50800",
   },
   {
-    id: 24,
-    nome: "Madu Gomes",
-    cargo: "Repórter",
-    foto: madu,
-    cor: "#FCD000",
-  },
-  {
     id: 25,
-    nome: "Marcus",
+    nome: "Marcus Trindade",
     cargo: "Repórter",
     foto: marcus,
     cor: "#FC8400",
   },
   {
     id: 26,
-    nome: "Maria Clara",
+    nome: "Maria Clara Batista",
     cargo: "Repórter",
     foto: mariaC,
     cor: "#F54F00",
@@ -262,7 +263,7 @@ export const equipe = [
   },
   {
     id: 29,
-    nome: "Raquel",
+    nome: "Raquel Lopes",
     cargo: "Repórter",
     foto: raquel,
     cor: "var(--cor-brand-orange)",
@@ -276,7 +277,7 @@ export const equipe = [
   },
   {
     id: 32,
-    nome: "Sayonara",
+    nome: "Sayonara Gomes",
     cargo: "Repórter",
     foto: sayonara,
     cor: "#f50800",
@@ -290,7 +291,7 @@ export const equipe = [
   },
   {
     id: 35,
-    nome: "Yasmin Carvalho",
+    nome: "Yasmim Carvalho",
     cargo: "Repórter",
     foto: yasmin,
     cor: "#F54F00",

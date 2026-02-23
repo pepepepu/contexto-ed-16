@@ -102,7 +102,7 @@ export function Especiais() {
               margin: 0,
             }}
           >
-            PODCAST DEVOÇÃO EM TOM MAIOR
+            DEVOÇÃO EM TOM MAIOR
           </h2>
         </div>
 

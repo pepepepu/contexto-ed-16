@@ -6,7 +6,6 @@ import styles from "../entrevistas.module.css";
 import hero from "../../../assets/penitentes/hero.jpg";
 import imagem01 from "../../../assets/penitentes/imagem01.jpg";
 import imagem02 from "../../../assets/penitentes/imagem02.jpg";
-import imagem03 from "../../../assets/penitentes/imagem03.png";
 
 import imagemCarrosel01 from "../../../assets/penitentes/imagemCarrosel01.jpg";
 import imagemCarrosel02 from "../../../assets/penitentes/imagemCarrosel02.png";
@@ -19,19 +18,26 @@ import imagemCarrosel02_03 from "../../../assets/penitentes/imagemCarrosel02_03.
 import imagemCarrosel03_01 from "../../../assets/penitentes/imagemCarrosel03_01.jpg";
 import imagemCarrosel03_02 from "../../../assets/penitentes/imagemCarrosel03_02.jpg";
 import imagemCarrosel03_03 from "../../../assets/penitentes/imagemCarrosel03_03.jpg";
-import { Carousel } from "../../../components";
+
+import arte01 from "../../../assets/penitentes/arte01.png";
+import arte02 from "../../../assets/penitentes/arte02.png";
+import arte03 from "../../../assets/penitentes/arte03.png";
+
+import { Carousel, AudioPlayer } from "../../../components";
+
+import matraca from "../../../assets/penitentes/matraca.mp3";
 
 const IMAGES = {
   hero: hero,
   sec2_img1: imagem01,
   secTrad_img1: imagem02,
-  secTrad_img2: imagem03,
   carousel_sec2_1: [imagemCarrosel01, imagemCarrosel02, imagemCarrosel03],
   carousel_sec2_2: [
     imagemCarrosel02_01,
     imagemCarrosel02_02,
     imagemCarrosel02_03,
   ],
+  carousel_artes: [arte01, arte02, arte03],
   carousel_sec3: [
     imagemCarrosel03_01,
     imagemCarrosel03_02,
@@ -120,8 +126,8 @@ export function Penitentes() {
           <span>
             Por:{" "}
             <strong>
-              Alice Mendonça, Ana Carolina Alves, Gustavo, Isla Silva e Maria
-              Eduarda Rocha.
+              Alice Mendonça, Ana Carolina Alves, Gustavo Barbosa, Isla Silva e
+              Maria Eduarda Rocha.
             </strong>
           </span>
         </motion.div>
@@ -163,7 +169,7 @@ export function Penitentes() {
             <iframe
               src="https://uploads.knightlab.com/storymapjs/291e3804ef2b71bde8634d1a07232ce1/dores/draft.html "
               width="100%"
-              height="450"
+              height="500"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
@@ -452,16 +458,12 @@ export function Penitentes() {
             de alguns membros não-católicos, segundo Seu Nestor.
           </p>
           <p>
-            “Eu acredito que esse foi um dos momentos, na história dos
-            penitentes, que mais alegrou o meu coração”, comenta Igor. O motivo
-            para isso é que agora os penitentes, que são um movimento católico
-            (ele frisa isso!), podem estar em comunhão plena com a Igreja
-            durante todo o ano, participando da Santa Missa, confessando,
-            comungando, etc. O fato de ser católico, no entanto, não impede a
-            participação de pessoas de outras denominações. “A gente não faz
-            restrições e acolhe a todos”, afirma Igor. Por outro lado, uma das
-            consequências dessa abertura maior da Igreja foi justamente a evasão
-            de alguns membros não-católicos, segundo Seu Nestor.
+            Todos os fatores acima contribuíram, cada um à sua maneira, para a
+            renovação dos Penitentes de Nossa Senhora das Dores. Desde a
+            abertura para membros externos à família originária, passando pela
+            aceitação dos menores de idade e, finalmente, chegando a uma relação
+            plena com a Igreja Católica dorense, o grupo demonstrou que mudar é,
+            algumas vezes, vital para a sua própria perpetuação.
           </p>
         </AnimatedSection>
 
@@ -481,6 +483,9 @@ export function Penitentes() {
             tradição inicialmente introduzida pelos colonizadores portugueses no
             Brasil.
           </p>
+
+          <AudioPlayer title="Som da matraca" src={matraca} legenda="" />
+
           <p>
             “A matraca é para chamar o despertador. Para despertar de cada
             oração, cada estação e cada canto. A matraca toca para silenciar e
@@ -570,17 +575,10 @@ export function Penitentes() {
             seguindo essa regra.
           </p>
 
-          <motion.figure
-            whileHover={{ scale: 1.02 }}
-            className={styles.mediaContainer}
-          >
-            <img
-              src={IMAGES.secTrad_img2}
-              alt="Tradição e Modernidade 2"
-              loading="lazy"
-            />
-            <figcaption>Arte: Alice Mendonça e Ana Carolina Alves</figcaption>
-          </motion.figure>
+          <Carousel
+            images={IMAGES.carousel_artes}
+            legenda="Arte: Alice Mendonça e Ana Carolina Alves"
+          />
 
           <p>
             Seu Nestor também explicou outros problemas que ele tem observado
@@ -604,6 +602,25 @@ export function Penitentes() {
             competindo”, e, no entanto, retornam a cidade para participar da
             procissão na Sexta-Feira Maior, pois a levam como compromisso.
           </p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className={styles.mapContainer}
+          >
+            <iframe
+              src="https://view.genially.com/698ed69effac9b678fcde770"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
+            <span className={styles.mapCaption}>
+              VISUALIDADE MAPA DAS CHEGANÇAS EM SERGIPE
+            </span>
+          </motion.div>
         </AnimatedSection>
 
         <AnimatedSection className={styles.contentBlock}>
@@ -673,7 +690,7 @@ export function Penitentes() {
             uma descarga elétrica no trabalho e a primeira coisa que veio na
             minha mente. ‘Meu Deus, não deixe com que eu pare de andar ou que eu
             tenha alguma coisa porque eu ainda preciso muito sair de
-            penitente’”, completa.
+            penitente’”, completa. Sobre o futuro, Seu Jorge é enfático:
           </p>
 
           <motion.div

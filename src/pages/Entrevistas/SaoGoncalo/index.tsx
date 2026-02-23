@@ -16,6 +16,9 @@ import imagemCarrosel04 from "../../../assets/saoGoncalo/imgCarrosel (4).jpg";
 import imagemCarrosel05 from "../../../assets/saoGoncalo/imgCarrosel (5).jpg";
 import imagemCarrosel06 from "../../../assets/saoGoncalo/imgCarrosel (6).jpg";
 
+import audio01 from "../../../assets/saoGoncalo/audio01.mp3";
+import audio02 from "../../../assets/saoGoncalo/audio02.mp3";
+
 const IMAGES = {
   hero: hero,
   img01: hero,
@@ -119,9 +122,6 @@ export function SaoGoncalo() {
         </motion.div>
 
         <AnimatedSection className={styles.contentBlock}>
-          <h2 className={styles.sectionTitle}>
-            CELEBRAÇÃO DO SÃO GONÇALO NA MUSSUCA
-          </h2>
           <p>
             <span className={styles.dropCap}>O</span> trajeto de pouco mais de
             20 quilômetros que separa a capital de Sergipe, Aracaju, do
@@ -428,8 +428,8 @@ export function SaoGoncalo() {
           <h2 className={styles.sectionTitle}>RENOVAÇÃO NA DANÇA</h2>
 
           <AudioPlayer
-            title="CÂNTICO DE ENTRADA"
-            src="../../assets/saoGoncalo/audio01.mp3"
+            title="VIVA A SÃO GONÇALO VIVA"
+            src={audio01}
             legenda="Filho do patrão, Noah, canta a música de São Gonçalo."
           />
 
@@ -692,8 +692,8 @@ export function SaoGoncalo() {
           </p>
 
           <AudioPlayer
-            title="DEPOIMENTO DE MESTRE ZÉ"
-            src={"../../assets/saoGoncalo/audio02.mp3"}
+            title="CANÇÃO PERFORMADA DURANTE O CORTEJO"
+            src={audio02}
             legenda="Grupo de São Gonçalo canta durante o cortejo."
           />
 

@@ -181,7 +181,7 @@ export function Editorial() {
                   letterSpacing: "0.1em",
                 }}
               >
-                Mensagem dos repórteres
+                ENTENDA AS REPORTAGENS
               </span>
               <motion.div
                 animate={{ x: isHovered ? 5 : 0 }}

@@ -116,7 +116,7 @@ export function Cheganca() {
             className={styles.heroSubtitle}
           >
             A história de uma das principais manifestações religiosas e
-            culturais do estado.
+            culturais do estado, que atravessa gerações e resiste ao apagamento
           </motion.p>
         </div>
       </header>
@@ -311,7 +311,7 @@ export function Cheganca() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className={styles.mediaContainer}
+            className={styles.mediaContainerPaper}
           >
             <img
               src={IMAGES.visualizade}
@@ -421,7 +421,7 @@ export function Cheganca() {
 
           <Carousel
             images={IMAGES.block3_everybody}
-            legenda="Com pessoas únicas e diversas, os dois grupos se unem no amor à tradição e na resistência cultural. "
+            legenda="Com pessoas únicas e diversas, os dois grupos se unem no amor à tradição e na resistência cultural. Fotos: Larissa Prado e Yasmim Carvalho"
           />
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>

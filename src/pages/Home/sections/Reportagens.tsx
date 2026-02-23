@@ -9,6 +9,7 @@ import bomJesus from "../../../assets/bomJesus/hero.jpg";
 import lavagem from "../../../assets/lavagemConceicao/hero.jpg";
 import penitentes from "../../../assets/penitentes/hero.jpg";
 import taieiras from "../../../assets/taieiras/imagemCarrosel03.jpg";
+import afoxe from "../../../assets/afoxe/hero.jpg";
 
 const noticias = [
   {
@@ -58,6 +59,14 @@ const noticias = [
       "Apesar da força cultural e religiosa, o grupo enfrenta desafios",
     img: taieiras,
     link: "/reportagens/taieiras",
+  },
+  {
+    id: 8,
+    titulo: "Afoxé em Sergipe preserva raízes de fé e cultura",
+    subtitulo:
+      "A manifestação que leva a força, a fé e o ritmo dos terreiros para as ruas.",
+    img: afoxe,
+    link: "/reportagens/afoxe",
   },
 ];
 

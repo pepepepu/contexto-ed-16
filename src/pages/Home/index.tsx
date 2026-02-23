@@ -16,7 +16,7 @@ export function Home() {
     { id: "reportagens", label: "Reportagens", color: "#FC8400" },
     { id: "especiais", label: "Especiais", color: "#F54F00" },
     { id: "documentarios", label: "Documentários", color: "#d63504ff" },
-    { id: "expedientes", label: "Expedientes", color: "#F2EA00" },
+    { id: "expedientes", label: "Expediente", color: "#F2EA00" },
   ];
 
   const renderSectionContent = (id: string) => {
