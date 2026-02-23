@@ -33,6 +33,10 @@ import sayonara from "../../assets/expediente/expediente (31).jpg";
 import valter from "../../assets/expediente/expediente (10).jpg";
 import yan from "../../assets/expediente/expediente (3).jpeg";
 import yasmin from "../../assets/expediente/expediente (32).jpg";
+import fernandaF from "../../assets/expediente/fernandaF.jpg";
+import gustavoB from "../../assets/expediente/gustavoB.jpg";
+import isabelaD from "../../assets/expediente/isabelaD.jpg";
+import larissaP from "../../assets/expediente/larissaP.jpg";
 
 export const equipe = [
   // ========================
@@ -112,7 +116,7 @@ export const equipe = [
   },
   {
     id: 14,
-    nome: "Iasmin Guimarães",
+    nome: "Iasmim Guimarães",
     cargo: "Editora de Visualidades e Fotografias",
     foto: iasmin,
     cor: "#f50800",
@@ -120,7 +124,7 @@ export const equipe = [
   {
     id: 31,
     nome: "Sarah Lima",
-    cargo: "Editora Audiovisual",
+    cargo: "Editora de Audiovisual",
     foto: sarah,
     cor: "var(--cor-acid-yellow)",
   },
@@ -185,11 +189,32 @@ export const equipe = [
     cor: "#F2EA00",
   },
   {
+    id: 9,
+    nome: "Fernanda Felix",
+    cargo: "Repórter",
+    foto: fernandaF,
+    cor: "#F2EA00",
+  },
+  {
+    id: 9,
+    nome: "Gustavo Barbosa",
+    cargo: "Repórter",
+    foto: gustavoB,
+    cor: "#F2EA00",
+  },
+  {
     id: 13,
     nome: "Helen Basilio",
     cargo: "Repórter",
     foto: helen,
     cor: "var(--cor-acid-yellow)",
+  },
+  {
+    id: 16,
+    nome: "Isabela Davis",
+    cargo: "Repórter",
+    foto: isabelaD,
+    cor: "#FC8400",
   },
   {
     id: 16,
@@ -214,10 +239,17 @@ export const equipe = [
   },
   {
     id: 20,
-    nome: "Laila Monteiro",
+    nome: "Laíla Monteiro",
     cargo: "Repórter",
     foto: laíla,
     cor: "var(--cor-brand-orange)",
+  },
+  {
+    id: 21,
+    nome: "Larissa Prado",
+    cargo: "Repórter",
+    foto: larissaP,
+    cor: "var(--cor-alert)",
   },
   {
     id: 21,

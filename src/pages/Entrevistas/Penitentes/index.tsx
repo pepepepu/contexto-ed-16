@@ -22,6 +22,7 @@ import imagemCarrosel03_03 from "../../../assets/penitentes/imagemCarrosel03_03.
 import arte01 from "../../../assets/penitentes/arte01.png";
 import arte02 from "../../../assets/penitentes/arte02.png";
 import arte03 from "../../../assets/penitentes/arte03.png";
+import arte04 from "../../../assets/penitentes/arte04.png";
 
 import { Carousel, AudioPlayer } from "../../../components";
 
@@ -37,7 +38,7 @@ const IMAGES = {
     imagemCarrosel02_02,
     imagemCarrosel02_03,
   ],
-  carousel_artes: [arte01, arte02, arte03],
+  carousel_artes: [arte01, arte02, arte04, arte03],
   carousel_sec3: [
     imagemCarrosel03_01,
     imagemCarrosel03_02,
@@ -484,7 +485,11 @@ export function Penitentes() {
             Brasil.
           </p>
 
-          <AudioPlayer title="Som da matraca" src={matraca} legenda="" />
+          <AudioPlayer
+            title="Som da matraca"
+            src={matraca}
+            legenda="Roberto Andrade e outros matraqueiros batendo a matraca durante a missa mensal dos penitentes. Áudio: Alice Mendonça"
+          />
 
           <p>
             “A matraca é para chamar o despertador. Para despertar de cada
@@ -617,9 +622,7 @@ export function Penitentes() {
               allowFullScreen={true}
               loading="lazy"
             ></iframe>
-            <span className={styles.mapCaption}>
-              VISUALIDADE MAPA DAS CHEGANÇAS EM SERGIPE
-            </span>
+            <span className={styles.mapCaption}>Crédito: Gustavo Barbosa</span>
           </motion.div>
         </AnimatedSection>
 

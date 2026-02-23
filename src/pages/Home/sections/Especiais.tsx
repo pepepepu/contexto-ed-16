@@ -2,33 +2,30 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Headphones, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
+import descidao from "../../../assets/podcasts/descidao.png";
+import pintados from "../../../assets/podcasts/pintados.png";
+import praviver from "../../../assets/podcasts/praviver.png";
+
 const podcasts = [
   {
     id: 1,
     programa: "Episódio 01",
-    episodio: "APRESENTAÇÃO",
-    capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+    episodio: "PRAVIVER WORSHIP",
+    capa: praviver,
     link: "#",
   },
   {
     id: 2,
     programa: "Episódio 02",
-    episodio: "DESCIDÃO DOS QUILOMBOLAS ",
-    capa: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=800&auto=format&fit=crop",
+    episodio: "PINTADOS DE ITAMARINÁ",
+    capa: pintados,
     link: "#",
   },
   {
     id: 3,
     programa: "Episódio 03",
-    episodio: "PINTADOS ITAMARINÁ",
-    capa: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop",
-    link: "#",
-  },
-  {
-    id: 4,
-    programa: "Episódio 04",
-    episodio: "PRAVIVER WORSHIP",
-    capa: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
+    episodio: "DESCIDÃO DOS QUILOMBOLAS",
+    capa: descidao,
     link: "#",
   },
 ];
@@ -193,7 +190,8 @@ function PodcastCard({ data }: { data: (typeof podcasts)[0] }) {
     >
       <div
         style={{
-          height: "clamp(160px, 25vh, 200px)",
+          width: "100%",
+          aspectRatio: "1 / 1",
           overflow: "hidden",
           borderBottom: "var(--border-thick)",
           position: "relative",
