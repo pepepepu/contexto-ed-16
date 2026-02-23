@@ -154,18 +154,7 @@ export function BomJesus() {
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>NA CASA MAIS ANTIGA, UM FIEL</h2>
-          <motion.figure
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className={styles.mediaContainer}
-          >
-            <img src={IMAGES.img01} alt="" loading="lazy" />
-            <figcaption>
-              Morador antigo do Santo Antônio, Seu Antônio Aciole luta para
-              preservar a memória do bairro. Foto: Sayonara Gomes
-            </figcaption>
-          </motion.figure>
+
           <p>
             Em frente à Igreja Santo Antônio, reside o Senhor Antônio Aciole,
             morador da casa mais antiga do bairro. Onde vive há 48 anos e
@@ -179,6 +168,19 @@ export function BomJesus() {
             Colina de Santo Antônio, com sua mãe, era o dia de vestir roupa nova
             e caminhar junto ao povo.
           </p>
+
+          <motion.figure
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.mediaContainer}
+          >
+            <img src={IMAGES.img01} alt="" loading="lazy" />
+            <figcaption>
+              Morador antigo do Santo Antônio, Seu Antônio Aciole luta para
+              preservar a memória do bairro. Foto: Sayonara Gomes
+            </figcaption>
+          </motion.figure>
 
           <p>
             Seu Antônio conta sobre a história que conhece do início da festa.
@@ -242,20 +244,7 @@ export function BomJesus() {
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>NAVEGANDO COM O BOM JESUS</h2>
-          <motion.figure
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className={styles.mediaContainer}
-          >
-            <img src={IMAGES.img02} alt="" loading="lazy" />
-            <figcaption>
-              {" "}
-              Enquanto houver amor pelo rio e ensinamento de pai, o tototó
-              resiste. Pela tradição, pela Barra e por Bom Jesus. Foto : Letícia
-              Amarante
-            </figcaption>
-          </motion.figure>
+
           <p>
             Acompanhante da procissão desde criança, Seu Pedro Henrique Almeida,
             barqueiro de 73 anos, comenta sobre as mudanças dos últimos anos.
@@ -276,6 +265,20 @@ export function BomJesus() {
             estavam às margens da Ponte do Imperador quando o barco do Bom Jesus
             saiu.{" "}
           </p>
+          <motion.figure
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.mediaContainer}
+          >
+            <img src={IMAGES.img02} alt="" loading="lazy" />
+            <figcaption>
+              {" "}
+              Enquanto houver amor pelo rio e ensinamento de pai, o tototó
+              resiste. Pela tradição, pela Barra e por Bom Jesus. Foto : Letícia
+              Amarante
+            </figcaption>
+          </motion.figure>
 
           <p>
             Seguindo a tradição do seu pai, Hugo Almeida conta sobre a sua
@@ -322,6 +325,20 @@ export function BomJesus() {
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>MOVIDA PELA FÉ</h2>
+
+          <p>
+            No pé da Colina do Santo Antônio, mora uma das figuras centrais da
+            organização da Festa de Bom Jesus dos Navegantes em Aracaju. Dona
+            Ivanira Lemos, mais conhecida como Nira, é referência para aqueles
+            que acompanham a festa de perto todo ano. Seja da igreja ou apenas
+            fiéis, todos a procuram para saber mais informações sobre a
+            comemoração. Não é por acaso, nascida e criada no bairro Santo
+            Antônio, Dona Nira, de 77 anos, participa da festa desde a
+            juventude, quando era apenas uma das fiéis na procissão. E, durante
+            décadas, deu conta de todo tipo de tarefas relacionadas à preparação
+            de festas religiosas do bairro como a Festa de Bom Jesus dos
+            Navegantes e a Festa de Santo Antônio.{" "}
+          </p>
           <motion.figure
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -339,19 +356,6 @@ export function BomJesus() {
               comunidade de fé do Bairro Santo Antônio. Foto : Letícia Amarante
             </figcaption>
           </motion.figure>
-          <p>
-            No pé da Colina do Santo Antônio, mora uma das figuras centrais da
-            organização da Festa de Bom Jesus dos Navegantes em Aracaju. Dona
-            Ivanira Lemos, mais conhecida como Nira, é referência para aqueles
-            que acompanham a festa de perto todo ano. Seja da igreja ou apenas
-            fiéis, todos a procuram para saber mais informações sobre a
-            comemoração. Não é por acaso, nascida e criada no bairro Santo
-            Antônio, Dona Nira, de 77 anos, participa da festa desde a
-            juventude, quando era apenas uma das fiéis na procissão. E, durante
-            décadas, deu conta de todo tipo de tarefas relacionadas à preparação
-            de festas religiosas do bairro como a Festa de Bom Jesus dos
-            Navegantes e a Festa de Santo Antônio.{" "}
-          </p>
 
           <p>
             Com exceção da programação, da data e da compra das flores, Dona
@@ -428,24 +432,12 @@ export function BomJesus() {
               loading="lazy"
             ></iframe>
             <span className={styles.mapCaption}>
-              VISUALIDADE MAPA DAS CHEGANÇAS EM SERGIPE
+              Mapa das Cheganças em Sergipe. Créditos: Letícia Amarante
             </span>
           </motion.div>
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>PROMESSA DE VIDA</h2>
-          <motion.figure
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className={styles.mediaContainer}
-          >
-            <img src={IMAGES.img04} alt="Albino Silva" loading="lazy" />
-            <figcaption>
-              Albino Silva preserva os ensinamentos e as tradições do pai
-              através de Bom Jesus todo ano. Foto : Letícia Amarante
-            </figcaption>
-          </motion.figure>
           <p>
             Albino Silva é um dos nomes que ajudam a manter viva a tradição da
             Procissão do Bom Jesus dos Navegantes em Aracaju. A relação da
@@ -463,6 +455,18 @@ export function BomJesus() {
             E, justamente no dia 1º de janeiro chegou a Aracaju, onde se deparou
             pela primeira vez com a procissão do Bom Jesus dos Navegantes.{" "}
           </p>
+          <motion.figure
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.mediaContainer}
+          >
+            <img src={IMAGES.img04} alt="Albino Silva" loading="lazy" />
+            <figcaption>
+              Albino Silva preserva os ensinamentos e as tradições do pai
+              através de Bom Jesus todo ano. Foto : Letícia Amarante
+            </figcaption>
+          </motion.figure>
 
           <p>
             Tocado pela fé e pelo simbolismo daquele momento, ele fez uma
@@ -508,19 +512,6 @@ export function BomJesus() {
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>CANTANDO EM PROCISSÃO</h2>
-          <motion.figure
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className={styles.mediaContainer}
-          >
-            <img src={IMAGES.img05} alt="Maria Auleína" loading="lazy" />
-            <figcaption>
-              Maria Auleína, é uma mulher de muita fé, que continua a dedicar a
-              sua vida à herança da tradição católica que herdou da sua mãe
-              desde muito nova. Foto : Letícia Amarante
-            </figcaption>
-          </motion.figure>
           <p>
             Assim como para muitos, a fé também foi uma herança de família para
             Maria Auleína, ou Leia, como gosta de ser chamada. Para ela, foi a
@@ -535,6 +526,19 @@ export function BomJesus() {
             tinha seis anos.
           </p>
 
+          <motion.figure
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.mediaContainer}
+          >
+            <img src={IMAGES.img05} alt="Maria Auleína" loading="lazy" />
+            <figcaption>
+              Maria Auleína, é uma mulher de muita fé, que continua a dedicar a
+              sua vida à herança da tradição católica que herdou da sua mãe
+              desde muito nova. Foto : Letícia Amarante
+            </figcaption>
+          </motion.figure>
           <p>
             Atualmente, continua a ir à procissão honrar a memória da mãe, agora
             na capital sergipana. Hoje, aposentada, tem mais tempo para dedicar
@@ -571,19 +575,6 @@ export function BomJesus() {
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>SERVINDO COMO GUARDIÃO</h2>
-          <motion.figure
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className={styles.mediaContainer}
-          >
-            <img src={IMAGES.img06} alt="Seu Antônio" loading="lazy" />
-            <figcaption>
-              No alto da colina do Santo Antônio, há um guardião, Seu Antônio ou
-              Galo, nunca deixa a Igreja mesmo em dia de procissão. Foto :
-              Letícia Amarante
-            </figcaption>
-          </motion.figure>
           <p>
             As tradições religiosas com o tempo se tornam também culturais,
             movidas pela fé e união das comunidades, nesse caso, o bairro Santo
@@ -601,6 +592,19 @@ export function BomJesus() {
             assim quando criança, mas com o tempo, se acostumou e passou a
             gostar. Hoje, para quem chega, ele se apresenta assim.{" "}
           </p>
+          <motion.figure
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.mediaContainer}
+          >
+            <img src={IMAGES.img06} alt="Seu Antônio" loading="lazy" />
+            <figcaption>
+              No alto da colina do Santo Antônio, há um guardião, Seu Antônio ou
+              Galo, nunca deixa a Igreja mesmo em dia de procissão. Foto :
+              Letícia Amarante
+            </figcaption>
+          </motion.figure>
 
           <p>
             A Igreja da Colina Santo Antônio ainda tem funcionamento em dois
