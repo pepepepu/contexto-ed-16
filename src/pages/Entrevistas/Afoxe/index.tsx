@@ -134,7 +134,8 @@ export function Afoxe() {
             Aracaju, o ritmo do ijexá se espalha pela avenida, acompanhado pelo
             agogô e pelo xequerê. Ao se deslocar nas ruas da cidade, o afoxé
             transmite cada elemento da religiosidade afro-brasileira para além
-            dos muros dos terreiros.
+            dos muros dos terreiros. A cada passo dado no chão, afirma que
+            aquelas pessoas estão ali para serem vistas, ouvidas e respeitadas
           </p>
           <p>
             O professor Fernando Aguiar, do Departamento de Museologia da
@@ -172,16 +173,12 @@ export function Afoxe() {
           </p>
 
           <Glossario />
-        </AnimatedSection>
-
-        <AnimatedSection className={styles.contentBlock}>
           <p>
-            A cada passo dado no chão, afirma que aquelas pessoas estão ali para
-            serem vistas, ouvidas e respeitadas. É a partir desse contexto que
-            as histórias de resistência do afoxé em Sergipe são vividas, e ainda
-            que essa presença ocupe ruas e avenidas da cidade, nem sempre
-            aparece nos registros oficiais, pois não há cadastro estadual ou
-            levantamento público que contabilize esses grupos.
+            É a partir desse contexto que as histórias de resistência do afoxé
+            em Sergipe são vividas, e ainda que essa presença ocupe ruas e
+            avenidas da cidade, nem sempre aparece nos registros oficiais, pois
+            não há cadastro estadual ou levantamento público que contabilize
+            esses grupos.
           </p>
           <p>
             Espalhados por diversos municípios sergipanos como Aracaju, Nossa
@@ -191,6 +188,9 @@ export function Afoxe() {
             invisibilidade desses locais, o cortejo acaba funcionando como uma
             estratégia de afirmação pública da fé e da identidade afro.
           </p>
+        </AnimatedSection>
+
+        <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>
             O SURGIMENTO DO AFOXÉ EM SERGIPE
           </h2>
@@ -204,17 +204,14 @@ export function Afoxe() {
             para colocar o afoxé na rua.
           </p>
           <p>
-            A escolha da Orla de Atalaia, em vez de o centro da cidade, não foi
+            A escolha da Orla de Atalaia, em vez do centro da cidade, não foi
             aleatória. O objetivo era garantir maior visibilidade, ampliando
             alcance simbólico para o cortejo que, a partir daquele momento,
             passou a acontecer no dia 8 de dezembro, data dedicada a Oxum e
-            também à padroeira da capital, Nossa Senhora da Conceição.
-          </p>
-          <p>
-            Nos primeiros anos, o Afoxé Omo Oxum tinha um objetivo bem definido:
-            trazer visibilidade e empoderamento às mulheres que formavam o
-            grupo. Elas eram pretas, marisqueiras, catadoras de mangaba e de
-            terreiro.
+            também à padroeira da capital, Nossa Senhora da Conceição. Nos
+            primeiros anos, o Afoxé Omo Oxum promovia o empoderamento das
+            mulheres que formavam o grupo. Elas eram pretas, marisqueiras,
+            catadoras de mangaba e de terreiro.
           </p>
 
           <motion.figure
@@ -248,17 +245,25 @@ export function Afoxe() {
             pessoa jurídica (CNPJ).
           </p>
           <p>
-            Em 2009, o afoxé Omo Oxum, passou a integrar o Calendário Cultural
-            de Sergipe, mostrando sua importância como cultura afro-brasileira.
-            Até os dias atuais, o afoxé Omo Oxum, mantém seu caráter comunitário
-            e aberto, acolhendo mulheres quilombolas, movimentos sociais e a
+            Em 2009, o afoxé Omo Oxum, passou a integrar o{" "}
+            <a
+              href="https://aleselegis.al.se.leg.br/Arquivo/Documents/legislacao/html/L71062010.html?identificador=35003300300035003A004C00"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "underline", color: "#FC8400" }}
+            >
+              Calendário Cultural de Sergipe
+            </a>
+            , mostrando sua importância como cultura afro-brasileira. Até os
+            dias atuais, o afoxé Omo Oxum, mantém seu caráter comunitário e
+            aberto, acolhendo mulheres quilombolas, movimentos sociais e a
             comunidade LGBTQIAPN+, reafirmando que o afoxé é, antes de tudo, um
             espaço de acolhimento.
           </p>
         </AnimatedSection>
 
         <AnimatedSection className={styles.contentBlock}>
-          <h2 className={styles.sectionTitle}>O AFOXÉ ALÉM DA FÉ</h2>
+          <h2 className={styles.sectionTitle}>ALÉM DA FÉ</h2>
           <p>
             Marcelo Alves, conhecido como Mestre Neném, relata que o primeiro
             bloco afro de Sergipe surgiu em 1987, no bairro Cirurgia, a partir
@@ -267,7 +272,7 @@ export function Afoxe() {
             formavam um movimento de resistência à criminalidade.
           </p>
           <p>
-            Neném e seus companheiros, que faziam parte do grupo, tornaram-se e
+            Neném e seus companheiros, que faziam parte do grupo, tornaram-se
             mestres na música percussiva. No entanto, em 2010, eles perceberam
             que o ambiente estava sendo transformado em “colégio eleitoral”.
             "Decidimos nos afastar e seguir caminhos diferentes," explica. Foi
@@ -276,7 +281,7 @@ export function Afoxe() {
             religiosa.
           </p>
           <p>
-            O grupo reverência Exu, divindade que representa o elo de
+            O grupo reverencia Exu, divindade que representa o elo de
             comunicação entre os homens e os Deuses, oferecendo-lhe o Padê, uma
             mistura de água, farofa de dendê, cachaça e mel. “Fazemos oferendas
             a Exu, pedindo sua proteção”, explica Dingo Bala, um dos membros
@@ -303,7 +308,7 @@ export function Afoxe() {
             recebem atenção durante o mês da Consciência Negra. “É complicado
             convencer instituições ricas a valorizar nosso trabalho”, lamenta
             Dingo, sublinhando a urgência de um reconhecimento contínuo da
-            cultura afro-brasileira e não apenas nesse período.{" "}
+            cultura afro-brasileira e não apenas nesse período.
           </p>
 
           <motion.figure
@@ -339,13 +344,6 @@ export function Afoxe() {
               instrumento ataque. Vídeo: Jairo Santos e Yuri Barbosa
             </figcaption>
           </motion.figure>
-
-          <p>
-            Se em Aracaju diferentes bairros passaram a ocupar o espaço público,
-            em Nossa Senhora do Socorro, município da região metropolitana de
-            Aracaju, o afoxé teve um papel ainda maior: o de enfrentamento à
-            intolerância religiosa.
-          </p>
         </AnimatedSection>
 
         <AnimatedSection className={styles.contentBlock}>
@@ -354,11 +352,12 @@ export function Afoxe() {
           </h2>
           <p>
             Na cidade de Nossa Senhora do Socorro, o Afoxé de Odé fez seu
-            primeiro cortejo em 2011. dois meses após uma sugestão feita durante
-            uma conversa com os filhos de Oxóssi, um deles sugeriu a realização
-            de um cortejo. A Ìyá Silvia, conta que teve receio por conta da
-            intolerância religiosa, mas seguiu adiante quando o Orixá Odé
-            confirmou sua vontade para a realização do cortejo.
+            primeiro cortejo em 2011. A Ìyá Silvia conta que teve receio por
+            conta da intolerância religiosa, mas seguiu adiante quando o Orixá
+            Odé confirmou sua vontade de realização. Com apenas dois meses de
+            preparação, o cortejo chegou à avenida com o apoio de muitas
+            pessoas, transformando o receio inicial em um momento de libertação
+            e força.
           </p>
 
           <motion.figure
@@ -404,9 +403,9 @@ export function Afoxe() {
           <p>
             Antes do cortejo, o próprio Orixá Odé é consultado para saber se ele
             deseja o evento e o cortejo somente é realizado após sua
-            confirmação. Antes de ir às ruas, a Ìyá Silvia fala que são
-            realizadas as obrigações, os pedidos de licença e os agradecimentos
-            ao pai maior Deus e aos Orixás Oxóssi e Oxum.
+            confirmação. Antes de ir às ruas, a Ìyá Silvia fala que as
+            obrigações, os pedidos de licença e os agradecimentos ao pai maior
+            Deus e aos Orixás Oxóssi e Oxum são realizados.
           </p>
 
           <Carousel
@@ -449,7 +448,7 @@ export function Afoxe() {
             >
               “Terreiros em luta: caminhos para o enfrentamento ao racismo
               religioso”
-            </a>{" "}
+            </a>
             , do Ilê Axé Omiojuarô (RJ), Ilê Axé Omi Ogun siwajú (BA) e Criola
             (RJ), e{" "}
             <a
@@ -466,7 +465,6 @@ export function Afoxe() {
             territorios sagrados.
           </p>
           <p>
-            {" "}
             Mesmo com a Constituição Federal de 1988 assegurando a liberdade de
             culto, as religiões de matriz africana são as mais atacadas por essa
             intolerância no país. As agressões são praticadas das mais diversas
@@ -480,12 +478,13 @@ export function Afoxe() {
             Estatística (IBGE), as religiões Umbanda e Candomblé representam
             1,05% dos grandes grupos religiosos no Brasil, um total de 1.849.824
             pessoas. Apesar de serem as religiões com menor porcentagem de
-            adeptos, são elas que lideram as denúncias de intolerência: Umbanda
-            (228), Candomblé (161), registros conjuntos de Umbanda e Candomblé
-            (47) e outras religiosidades afro-brasileiras (40). Segundo o
-            Ministério dos Direitos Humanos e da Cidadania (MDHC), 2.774
-            denúncias de intolerância religiosa foram registradas pelo Disque
-            100 entre janeiro de 2025 e janeiro de 2026.{" "}
+            adeptos, são elas que lideram as denúncias de intolerância: a
+            Umbanda reúne 228 registros, seguida pelo Candomblé (161) e por
+            ocorrências classificadas como Umbanda e Candomblé (47), além de
+            outras religiosidades afro-brasileiras (40). Segundo o Ministério
+            dos Direitos Humanos e da Cidadania (MDHC), 2.774 denúncias de
+            intolerância religiosa foram registradas pelo Disque 100 entre
+            janeiro de 2025 e janeiro de 2026.
           </p>
 
           <motion.figure
@@ -506,20 +505,28 @@ export function Afoxe() {
             cultos possam ser realizados em espaços públicos e privados sem
             discriminação e também garante que qualquer cidadão possa criar,
             administrar instituições e templos de acordo com suas próprias
-            tradições e regras. No ano de 2007, através da lei nº 11.635/2007,
-            instituiu em 21 de janeiro o Dia Nacional de Combate à Intolerância
-            Religiosa, medida que reforça a necessidade do debate e o
-            enfrentamento aos casos de discriminação e violência motivados por
+            tradições e regras. No ano de 2007, através da{" "}
+            <a
+              href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11635.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "underline", color: "#FC8400" }}
+            >
+              lei nº 11.635/2007
+            </a>
+            , instituiu em 21 de janeiro o Dia Nacional de Combate à
+            Intolerância Religiosa, medida que reforça a necessidade do debate e
+            o enfrentamento aos casos de discriminação e violência motivados por
             crença, ainda recorrentes no país.
           </p>
           <p>
-            Para buscar auxílio em casos de situação que envolva a violação da
-            liberdade religiosa, você pode contar com a Ouvidoria Nacional de
-            Direitos Humanos (ONDH), pelo Disque 100, que tem funcionamento 24h
-            de forma ininterrupta. Você também pode contar com a ajuda e suporte
-            do Ministério Público, Defensoria Pública, Ordem dos Advogados do
-            Brasil (OAB), delegacias de polícia e núcleos de assistência
-            jurídica gratuita por diversas universidades.
+            Para buscar auxílio em situações de violação da liberdade religiosa,
+            qualquer pessoa pode contar com a Ouvidoria Nacional de Direitos
+            Humanos (ONDH), pelo Disque 100. Além disso, diversas instituições
+            dão suporte nesse tipo de contexto como Ministério Público,
+            Defensoria Pública, Ordem dos Advogados do Brasil (OAB), delegacias
+            de polícia e núcleos de assistência jurídica gratuita de diversas
+            universidades públicas e privadas.
           </p>
 
           <Denuncias />
