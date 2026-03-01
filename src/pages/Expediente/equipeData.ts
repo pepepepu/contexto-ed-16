@@ -71,7 +71,7 @@ export const equipe = [
   {
     id: 19,
     nome: "Josino Tavares",
-    cargo: "Editor Chefe",
+    cargo: "Editor-Chefe",
     foto: josino,
     cor: "var(--cor-primary)",
   },
@@ -82,7 +82,7 @@ export const equipe = [
   {
     id: 33,
     nome: "Valter Davi",
-    cargo: "Sub-editor Chefe",
+    cargo: "Subeditor-Chefe",
     foto: valter,
     cor: "#FCD000",
   },
@@ -110,7 +110,7 @@ export const equipe = [
   {
     id: 22,
     nome: "Lauan Brito",
-    cargo: "Sub-Editor de Site",
+    cargo: "SubEditor de Site",
     foto: lauan,
     cor: "var(--cor-acid-yellow)",
   },

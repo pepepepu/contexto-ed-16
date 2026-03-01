@@ -6,8 +6,7 @@ import styles from "../entrevistas.module.css";
 import { Carousel } from "../../../components";
 
 import hero from "../../../assets/cheganca/imagem01.jpg";
-import imagemCarrosel01 from "../../../assets/cheganca/imagemCarrosel01.jpg";
-import imagemCarrosel02 from "../../../assets/cheganca/imagemCarrosel02.jpg";
+
 import imagemCarrosel03 from "../../../assets/cheganca/imagemCarrosel03.jpg";
 import imagemCarrosel04 from "../../../assets/cheganca/imagemCarrosel04.jpg";
 import imagemCarrosel05 from "../../../assets/cheganca/imagemCarrosel05.jpg";
@@ -15,6 +14,9 @@ import imagemCarrosel06 from "../../../assets/cheganca/imagemCarrosel06.jpg";
 import imagemCarrosel07 from "../../../assets/cheganca/imagemCarrosel07.jpg";
 import imagemCarrosel08 from "../../../assets/cheganca/imagemCarrosel08.jpg";
 import visualizade from "../../../assets/cheganca/visualidade01.png";
+
+import imagemcarrossel001 from "../../../assets/cheganca/chegancanew.jpeg"
+import imagemcarrossel002 from "../../../assets/cheganca/chegancanew2.jpeg"
 
 import imagemCarrosel02_01 from "../../../assets/cheganca/imagemCarrosel02_01.jpg";
 import imagemCarrosel02_02 from "../../../assets/cheganca/imagemCarrosel02_02.jpg";
@@ -34,8 +36,8 @@ const IMAGES = {
   hero: hero,
   visualizade: visualizade,
   block1_carousel: [
-    imagemCarrosel01,
-    imagemCarrosel02,
+    imagemcarrossel001,
+    imagemcarrossel002,
     imagemCarrosel03,
     imagemCarrosel04,
     imagemCarrosel05,

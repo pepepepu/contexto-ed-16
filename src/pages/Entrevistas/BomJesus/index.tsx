@@ -142,7 +142,7 @@ export function BomJesus() {
             disse que estava de saída e por “azar” nos encontrou. Nesse primeiro
             contato, sentimos nossas expectativas de acolhimento quebradas. Mas,
             ainda assim, conseguimos um número de telefone e um ponto de partida
-            para a nossa reportagem. Apesar desse início desafiador, atingimos o
+            para a nossa reportagem. </p><p>Apesar desse início desafiador, atingimos o
             objetivo que havíamos planejado: contar a história e a tradição da
             Festa de Bom Jesus dos Navegantes por meio daqueles que a vivenciam
             todos os anos. Durante a apuração, encontramos seis fiéis, escutamos

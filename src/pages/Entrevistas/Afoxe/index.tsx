@@ -135,7 +135,7 @@ export function Afoxe() {
             agogô e pelo xequerê. Ao se deslocar nas ruas da cidade, o afoxé
             transmite cada elemento da religiosidade afro-brasileira para além
             dos muros dos terreiros. A cada passo dado no chão, afirma que
-            aquelas pessoas estão ali para serem vistas, ouvidas e respeitadas
+            aquelas pessoas estão ali para serem vistas, ouvidas e respeitadas.
           </p>
           <p>
             O professor Fernando Aguiar, do Departamento de Museologia da
@@ -348,7 +348,7 @@ export function Afoxe() {
 
         <AnimatedSection className={styles.contentBlock}>
           <h2 className={styles.sectionTitle}>
-            ENFRENTAMENTO Á INTOLERÂNCIA RELIGIOSA
+             INTOLERÂNCIA RELIGIOSA
           </h2>
           <p>
             Na cidade de Nossa Senhora do Socorro, o Afoxé de Odé fez seu
@@ -429,8 +429,8 @@ export function Afoxe() {
             viewport={{ once: true }}
             className={styles.pullQuote}
           >
-            "A rua é do povo, mas o chão que pisamos no Afoxé é solo sagrado do
-            terreiro." -Ìyá Silvia
+            “Eles invadem nosso espaço, entram para entregar papel e dizer que
+            somos os diabos” -Ìyá Silvia
           </motion.div>
         </AnimatedSection>
 

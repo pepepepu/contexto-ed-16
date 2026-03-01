@@ -67,7 +67,7 @@ export function Hero() {
             fontSize: "clamp(4rem, 12vw, 9rem)",
             lineHeight: 0.9,
             textTransform: "uppercase",
-            textShadow: "4px 4px 0px #000",
+            textShadow: "0px 9px 4px #050505",
             color: "#fff",
           }}
         >
