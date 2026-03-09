@@ -142,14 +142,17 @@ export function BomJesus() {
             disse que estava de saída e por “azar” nos encontrou. Nesse primeiro
             contato, sentimos nossas expectativas de acolhimento quebradas. Mas,
             ainda assim, conseguimos um número de telefone e um ponto de partida
-            para a nossa reportagem. </p><p>Apesar desse início desafiador, atingimos o
-            objetivo que havíamos planejado: contar a história e a tradição da
-            Festa de Bom Jesus dos Navegantes por meio daqueles que a vivenciam
-            todos os anos. Durante a apuração, encontramos seis fiéis, escutamos
-            suas experiências de devoção e, a partir desses relatos, percebemos
-            que a fé em Bom Jesus está profundamente ligada a uma herança de
-            família, passando de geração em geração. Infelizmente, também é uma
-            tradição que tem se perdido com o tempo.{" "}
+            para a nossa reportagem.{" "}
+          </p>
+          <p>
+            Apesar desse início desafiador, atingimos o objetivo que havíamos
+            planejado: contar a história e a tradição da Festa de Bom Jesus dos
+            Navegantes por meio daqueles que a vivenciam todos os anos. Durante
+            a apuração, encontramos seis fiéis, escutamos suas experiências de
+            devoção e, a partir desses relatos, percebemos que a fé em Bom Jesus
+            está profundamente ligada a uma herança de família, passando de
+            geração em geração. Infelizmente, também é uma tradição que tem se
+            perdido com o tempo.{" "}
           </p>
         </AnimatedSection>
         <AnimatedSection className={styles.contentBlock}>
@@ -255,15 +258,26 @@ export function BomJesus() {
             festa, além da falta de incentivo do poder público.
           </p>
 
+          <p>Dentro do seu barco, ao lado do filho, comenta com pesar:</p>
+
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.pullQuote}
+          >
+            "Antigamente a gente arrumava, botava a bandeira
+            <br />
+            pintava a navegação <br />
+            Agora tá difícil até de comprar óleo"
+          </motion.div>
+
           <p>
-            Dentro do seu barco, ao lado do filho, comenta com pesar:
-            “Antigamente a gente arrumava, botava a bandeira, pintava a
-            navegação. Agora tá difícil até de comprar óleo”, declarou Seu
-            Pedro. Apesar das dificuldades, esteve mais um ano na procissão,
-            acompanhando de perto, com seu totóto, o Bom Jesus navegando no Rio
-            Sergipe. Percorreu levando algumas pessoas, e a nossa equipe, que
-            estavam às margens da Ponte do Imperador quando o barco do Bom Jesus
-            saiu.{" "}
+            declarou Seu Pedro. Apesar das dificuldades, esteve mais um ano na
+            procissão, acompanhando de perto, com seu totóto, o Bom Jesus
+            navegando no Rio Sergipe. Percorreu levando algumas pessoas, e a
+            nossa equipe, que estavam às margens da Ponte do Imperador quando o
+            barco do Bom Jesus saiu.{" "}
           </p>
           <motion.figure
             initial={{ opacity: 0, x: 50 }}

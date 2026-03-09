@@ -247,12 +247,12 @@ export function MensagemReporteres() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&controls=0&rel=0`}
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&controls=1&rel=0&playsinline=1`}
                   title={currentVideo.titulo}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  style={{ display: "block", pointerEvents: "none" }}
+                  style={{ display: "block", pointerEvents: "auto" }}
                 ></iframe>
               </motion.div>
             </AnimatePresence>

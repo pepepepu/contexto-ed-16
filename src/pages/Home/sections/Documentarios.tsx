@@ -2,23 +2,48 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Play, MonitorPlay } from "lucide-react";
 import { useState } from "react";
 
-import heroSaoGoncalo from "../../../assets/saoGoncalo/img01.jpg";
-import heroBomJesus from "../../../assets/bomJesus/hero.jpg";
-
 const docs = [
   {
     id: 1,
     titulo: "A MARIPOSA DE SÃO GONÇALO",
-    youtubeId: "DDxgH7kmXHQ",
-    thumb: heroSaoGoncalo,
-    duracao: "9:59",
+    youtubeId: "MEjGusfZym0",
+    duracao: "10:00",
   },
   {
     id: 2,
-    titulo: "NA CORRENTEZA DO BOM JESUS ",
-    youtubeId: "dDiBKrlopfo",
-    thumb: heroBomJesus,
-    duracao: "9:16",
+    titulo: "NA CORRENTEZA DO BOM JESUS",
+    youtubeId: "0z1dR-5Hsgo",
+    duracao: "9:17",
+  },
+  {
+    id: 3,
+    titulo: "FACES DA CHEGANÇA",
+    youtubeId: "FTde8pOE_Ps",
+    duracao: "10:01",
+  },
+  {
+    id: 4,
+    titulo: "ORA YEYEO, OLHAI POR NÓS",
+    youtubeId: "325dyhvYlkw",
+    duracao: "10:00",
+  },
+  {
+    id: 5,
+    titulo: "ANTES DO CORTEJO VEM O FUNDAMENTO",
+    youtubeId: "-yJW_C_jgpk",
+    duracao: "9:30",
+  },
+  {
+    id: 6,
+    titulo: "AS TAIEIRAS ESTARÃO",
+    youtubeId: "U9zYhggDRi0",
+    duracao: "12:31",
+  },
+  {
+    id: 7,
+    titulo: "O MISTÉRIO DA FÉ",
+    youtubeId: "VydlENvnqp0",
+    duracao: "12:18",
   },
 ];
 
@@ -44,14 +69,13 @@ export function Documentarios() {
         color: "white",
         position: "relative",
         padding: "clamp(1.5rem, 5vw, 4rem)",
-        overflow: "hidden",
       }}
     >
       <div
         style={{
-          marginBottom: "2rem",
+          height: "15%",
           display: "flex",
-          alignItems: "baseline",
+          alignItems: "center",
           gap: "1rem",
         }}
       >
@@ -62,6 +86,7 @@ export function Documentarios() {
             color: "var(--cor-white)",
             margin: 0,
             lineHeight: 0.8,
+            marginBottom: "10px",
           }}
         >
           DOCS.
@@ -83,24 +108,23 @@ export function Documentarios() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "2rem",
-          alignItems: "flex-start",
-          height: "100%",
-          overflow: "hidden",
+          gap: "2%",
+          alignItems: "stretch",
+          height: "85%",
+          width: "100%",
         }}
       >
         <div
           style={{
-            flex: "1 1 auto",
-            width: "100%",
-            maxWidth: "1000px",
+            flex: "1 1 60%",
+            height: "90%",
+            width: "60%",
           }}
         >
           <div
             style={{
               width: "100%",
-              height: "auto",
-              aspectRatio: "16/9",
+              height: "100%",
               border: "1px solid #333",
               backgroundColor: "#111",
               position: "relative",
@@ -117,7 +141,7 @@ export function Documentarios() {
                   exit={{ opacity: 0 }}
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${activeDoc.youtubeId}?autoplay=1&rel=0`}
+                  src={`https://www.youtube.com/embed/${activeDoc.youtubeId}?autoplay=1&rel=0&playsinline=1`}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -134,7 +158,7 @@ export function Documentarios() {
                     width: "100%",
                     height: "100%",
                     position: "relative",
-                    backgroundImage: `url(${activeDoc.thumb})`,
+                    backgroundImage: `url(https://i.ytimg.com/vi/${activeDoc.youtubeId}/maxresdefault.jpg)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     display: "flex",
@@ -161,8 +185,8 @@ export function Documentarios() {
                       backdropFilter: "blur(5px)",
                       border: "1px solid rgba(255,255,255,0.5)",
                       borderRadius: "50%",
-                      width: "clamp(60px, 10vw, 80px)",
-                      height: "clamp(60px, 10vw, 80px)",
+                      width: "15%",
+                      aspectRatio: "1/1",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -207,17 +231,12 @@ export function Documentarios() {
         </div>
         <div
           style={{
-            flex: "1 1 300px",
-            minWidth: "280px",
+            flex: "1 1 35%",
+            height: "90%",
+            width: "35%",
             display: "flex",
             flexDirection: "column",
-            gap: "1rem",
-            height: "100%",
-            overflowY: "auto",
-            overflowX: "hidden",
-            paddingRight: "0.5rem",
           }}
-          className="custom-scrollbar"
         >
           <div
             style={{
@@ -226,11 +245,7 @@ export function Documentarios() {
               alignItems: "center",
               borderBottom: "1px solid #333",
               paddingBottom: "1rem",
-              marginBottom: "0.5rem",
-              position: "sticky",
-              top: 0,
-              background: "var(--cor-black)",
-              zIndex: 10,
+              marginBottom: "1rem",
             }}
           >
             <span
@@ -248,7 +263,18 @@ export function Documentarios() {
           </div>
 
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+            className="custom-scrollbar"
+            style={{
+              flexGrow: 1,
+              height: "80%",
+              maxHeight: "100%",
+              overflowY: "auto",
+              overflowX: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+              paddingRight: "0.5rem",
+            }}
           >
             {docs.map((doc) => {
               const isActive = activeDoc.id === doc.id;
@@ -264,7 +290,7 @@ export function Documentarios() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "1rem",
+                    gap: "5%",
                     padding: "1rem",
                     cursor: "pointer",
                     backgroundColor: isActive
@@ -278,9 +304,9 @@ export function Documentarios() {
                 >
                   <div
                     style={{
-                      width: "80px",
-                      height: "50px",
-                      backgroundImage: `url(${doc.thumb})`,
+                      width: "30%",
+                      aspectRatio: "16/9",
+                      backgroundImage: `url(https://i.ytimg.com/vi/${doc.youtubeId}/maxresdefault.jpg)`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       flexShrink: 0,
