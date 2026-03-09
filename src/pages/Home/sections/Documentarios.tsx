@@ -59,6 +59,7 @@ export function Documentarios() {
 
   return (
     <div
+      className="docs-main-wrapper"
       style={{
         width: "100%",
         height: "100vh",
@@ -105,6 +106,7 @@ export function Documentarios() {
       </div>
 
       <div
+        className="docs-content-layout"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -115,6 +117,7 @@ export function Documentarios() {
         }}
       >
         <div
+          className="docs-video-section"
           style={{
             flex: "1 1 60%",
             height: "90%",
@@ -230,6 +233,7 @@ export function Documentarios() {
           </div>
         </div>
         <div
+          className="docs-playlist-section"
           style={{
             flex: "1 1 35%",
             height: "90%",
@@ -359,6 +363,30 @@ export function Documentarios() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .docs-main-wrapper {
+            height: auto !important;
+            min-height: 100vh;
+          }
+          .docs-content-layout {
+            flex-direction: column !important;
+            height: auto !important;
+            flex-wrap: nowrap !important;
+            gap: 1.5rem !important;
+          }
+          .docs-video-section {
+            width: 100% !important;
+            height: 35vh !important;
+            flex: none !important;
+          }
+          .docs-playlist-section {
+            width: 100% !important;
+            height: 50vh !important;
+            flex: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
