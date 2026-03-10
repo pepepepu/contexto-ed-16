@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Headphones, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
+import intro from "../../../assets/podcasts/intro.png";
 import descidao from "../../../assets/podcasts/descidao.png";
 import pintados from "../../../assets/podcasts/pintados.png";
 import praviver from "../../../assets/podcasts/praviver.png";
@@ -10,23 +11,30 @@ const podcasts = [
   {
     id: 1,
     programa: "Episódio 01",
-    episodio: "PRAVIVER WORSHIP",
-    capa: praviver,
-    link: "#",
+    episodio: "DEVOÇÃO EM TOM MAIOR",
+    capa: intro,
+    link: "https://open.spotify.com/episode/5AbV8IXoktijFzb46mWkhT?si=hiCByiUaTrCS_-E6lCVstA",
   },
   {
     id: 2,
     programa: "Episódio 02",
-    episodio: "PINTADOS DE ITAMARINÁ",
-    capa: pintados,
-    link: "#",
+    episodio: "PRAVIVER WORSHIP",
+    capa: praviver,
+    link: "https://open.spotify.com/episode/3R2MCse9PGX0mFqoOJuRQA?si=dz7Gw7XrSS23UGmpEtEThA",
   },
   {
     id: 3,
     programa: "Episódio 03",
+    episodio: "PINTADOS DE ITAMARINÁ",
+    capa: pintados,
+    link: "https://open.spotify.com/episode/1gnQXxCKM5gs5OTT61acVV?si=kgyHcivLSQWzgSkuvHg4rg",
+  },
+  {
+    id: 4,
+    programa: "Episódio 04",
     episodio: "DESCIDÃO DOS QUILOMBOLAS",
     capa: descidao,
-    link: "#",
+    link: "https://open.spotify.com/episode/6ZSdbPfHs0HvbfWGjV5qy8?si=uHnEPWvJQfu4-yv3srpmvg",
   },
 ];
 
