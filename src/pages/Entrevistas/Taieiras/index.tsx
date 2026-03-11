@@ -115,8 +115,8 @@ export function Taieiras() {
           <span>
             Por:{" "}
             <strong>
-              Josielly Amaro, Maria Eduarda Gomes, Rossela Cecília e Larissa
-              Xavier.
+              Gabrielle Lima, Josielly Amaro, Maria Eduarda Gomes, Rossela
+              Cecília e Larissa Xavier.
             </strong>
           </span>
         </motion.div>
