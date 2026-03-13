@@ -52,6 +52,14 @@ const mensagens = [
     link: "https://youtube.com/shorts/VOuTfkHSUmA?feature=share",
     duracao: "0:35",
   },
+  {
+    id: 7,
+    titulo: "Afoxé",
+    thumb:
+      "https://images.unsplash.com/photo-1598155523122-3842334d6c1f?q=80&w=800&auto=format&fit=crop",
+    link: "https://youtube.com/shorts/pjqsFAOX-xQ?si=rA63piHhSvRYcyKV",
+    duracao: "0:36",
+  },
 ];
 
 function getYouTubeId(url: string) {
